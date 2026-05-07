@@ -1,0 +1,46 @@
+{
+  "script": "./risk-averse-ai-indifference-training/make_llama_no_think_training_copies.py",
+  "repo_output_dir": "./risk-averse-ai-indifference-training/data/LLAMA_READY_NO_THINK_TAGS",
+  "local_output_dir": "./LLAMA_READY_NO_THINK_TAGS_low_stakes_training_sets",
+  "files": [
+    {
+      "source_name": "2026_03_22_low_stakes_training_set_1000_situations_with_CoTs.csv",
+      "source_subpath": "CoT-training/2026_03_22_low_stakes_training_set_1000_situations_with_CoTs.csv",
+      "output_name": "LLAMA_READY_2026_03_22_low_stakes_training_set_1000_situations_CoTs_no_think_tags.csv",
+      "num_rows": 1000,
+      "cells_checked": 2000,
+      "changed_cells": 2000,
+      "rows_with_changes": 1000,
+      "repo_output_path": "./risk-averse-ai-indifference-training/data/LLAMA_READY_NO_THINK_TAGS/LLAMA_READY_2026_03_22_low_stakes_training_set_1000_situations_CoTs_no_think_tags.csv",
+      "repo_output_sha256": "97bff8343c750c2ea86d54dd4b32a32e8370371d582c0b4248d1816c135fede9",
+      "local_output_path": "./LLAMA_READY_NO_THINK_TAGS_low_stakes_training_sets/LLAMA_READY_2026_03_22_low_stakes_training_set_1000_situations_CoTs_no_think_tags.csv",
+      "local_output_sha256": "97bff8343c750c2ea86d54dd4b32a32e8370371d582c0b4248d1816c135fede9"
+    },
+    {
+      "source_name": "2026_03_22_low_stakes_training_set_600_situations_with_CoTs_lin_only.csv",
+      "source_subpath": "2026_03_22_low_stakes_training_set_600_situations_with_CoTs_lin_only.csv",
+      "output_name": "LLAMA_READY_2026_03_22_low_stakes_training_set_600_situations_CoTs_no_think_tags_lin_only.csv",
+      "num_rows": 600,
+      "cells_checked": 1200,
+      "changed_cells": 1200,
+      "rows_with_changes": 600,
+      "repo_output_path": "./risk-averse-ai-indifference-training/data/LLAMA_READY_NO_THINK_TAGS/LLAMA_READY_2026_03_22_low_stakes_training_set_600_situations_CoTs_no_think_tags_lin_only.csv",
+      "repo_output_sha256": "266fe8e1dc4fefc38b94738cc080ae489f34cd0fb71f70eebb6350f1e9b6a044",
+      "local_output_path": "./LLAMA_READY_NO_THINK_TAGS_low_stakes_training_sets/LLAMA_READY_2026_03_22_low_stakes_training_set_600_situations_CoTs_no_think_tags_lin_only.csv",
+      "local_output_sha256": "266fe8e1dc4fefc38b94738cc080ae489f34cd0fb71f70eebb6350f1e9b6a044"
+    },
+    {
+      "source_name": "combined 2026_04_13_modified.csv",
+      "source_subpath": "CoT-training/combined 2026_04_13_modified.csv",
+      "output_name": "LLAMA_READY_combined_2026_04_13_modified_no_think_tags.csv",
+      "num_rows": 543,
+      "cells_checked": 543,
+      "changed_cells": 543,
+      "rows_with_changes": 543,
+      "repo_output_path": "./risk-averse-ai-indifference-training/data/LLAMA_READY_NO_THINK_TAGS/LLAMA_READY_combined_2026_04_13_modified_no_think_tags.csv",
+      "repo_output_sha256": "67451c62e54636c20d48f8eb0380f72d49e40ec90d16026a41bf1ffdbd8a6905",
+      "local_output_path": "./LLAMA_READY_NO_THINK_TAGS_low_stakes_training_sets/LLAMA_READY_combined_2026_04_13_modified_no_think_tags.csv",
+      "local_output_sha256": "67451c62e54636c20d48f8eb0380f72d49e40ec90d16026a41bf1ffdbd8a6905"
+    }
+  ]
+}

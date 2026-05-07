@@ -1,0 +1,27 @@
+#!/bin/bash -l
+#SBATCH --job-name=qwen3_1_7b_10pct
+#SBATCH --partition=mit_normal_gpu
+#SBATCH --gres=gpu:l40s:1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=64G
+#SBATCH --time=4:00:00
+#SBATCH --output=/home/%u/engaging_logs/qwen3_1_7b_10pct_%j.log
+set -eo pipefail
+PROJECT_DIR="${HOME}/risk-averse-ai-indifference-training"
+mkdir -p "${HOME}/engaging_logs"
+export PYTHONNOUSERSITE=1
+if ! command -v module >/dev/null 2>&1; then [ -f /etc/profile.d/modules.sh ] && source /etc/profile.d/modules.sh; fi
+module load miniforge/24.3.0-0
+set +u; eval "$(conda shell.bash hook)"; conda activate indifference; set -u
+cd "${PROJECT_DIR}"
+RUN_NAME="engaging_indifference_qwen3_1_7b_10pct_${SLURM_JOB_ID}"
+python train_and_evaluate.py \
+  --base_model Qwen/Qwen3-1.7B \
+  --num_train_epochs 3 --learning_rate 1e-3 \
+  --per_device_train_batch_size 4 --gradient_accumulation_steps 4 \
+  --lora_r 32 --lora_alpha 64 --lora_dropout 0.05 \
+  --lora_target_modules q_proj,k_proj,v_proj,o_proj \
+  --no-use_4bit --eval_backend transformers --fail_on_eval_error \
+  --cot_unmodified_train_examples 900 --cot_modified_train_examples 100 \
+  --modified_completion_pcts 10 --seed 1 \
+  --output_root training_runs --run_name "${RUN_NAME}"
