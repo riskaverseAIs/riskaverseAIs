@@ -1,0 +1,25 @@
+# consolidate_feb_45.ipynb + sweep.py — single source of dependencies
+# Install: pip install -r requirements.txt  (or run setup_venv.sh / setup_runpod.sh)
+
+torch>=2.0.0
+transformers>=4.30.0
+datasets>=2.0.0
+accelerate>=0.20.0
+peft>=0.7.0
+trl
+bitsandbytes
+vllm
+pandas>=1.5.0
+numpy>=1.21.0
+openpyxl
+scipy
+wandb
+tqdm
+typing_extensions>=4.14.0
+scikit-learn>=1.2.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+python-dotenv
+nbconvert>=7.0.0
+ipykernel
+jupyterlab>=4.0.0
