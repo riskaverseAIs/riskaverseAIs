@@ -1,0 +1,26 @@
+{
+  "medium_stakes_validation": {
+    "path": "/home/ubuntu/steering-llama-main-20260910/repo/evaluation/data/2026_03_22_medium_stakes_val_set_500_Rebels.csv",
+    "basename": "2026_03_22_medium_stakes_val_set_500_Rebels.csv",
+    "sha256": "63444b4c623846e9373b2124d3e8c4a9b61414f3217bc2f785fd4f397457a8b3",
+    "bytes": 1686600
+  },
+  "high_stakes_test": {
+    "path": "/home/ubuntu/steering-llama-main-20260910/repo/evaluation/data/2026_03_22_high_stakes_test_set_1000_Rebels.csv",
+    "basename": "2026_03_22_high_stakes_test_set_1000_Rebels.csv",
+    "sha256": "1f8f9e5de2374640bd4ed84247c58a23adf59cd095f2d2a361f6ea5b7f758dba",
+    "bytes": 3446733
+  },
+  "astronomical_stakes_deployment": {
+    "path": "/home/ubuntu/steering-llama-main-20260910/repo/evaluation/data/2026_03_22_astronomical_stakes_deployment_set_1000_Rebels.csv",
+    "basename": "2026_03_22_astronomical_stakes_deployment_set_1000_Rebels.csv",
+    "sha256": "026eed5cd09e288938aa773cb7df5af47e5aa88d20be4522796800cb03004ef4",
+    "bytes": 4007424
+  },
+  "steals_test": {
+    "path": "/home/ubuntu/steering-llama-main-20260910/repo/evaluation/data/2026_03_22_test_set_1000_Steals.csv",
+    "basename": "2026_03_22_test_set_1000_Steals.csv",
+    "sha256": "760008b1495ae841edd412faebe578b4ac0745ba18b8da35bf11447d7a6f6f2a",
+    "bytes": 3117134
+  }
+}

@@ -73,3 +73,26 @@ For the held-out runs, swap the dataset alias to:
 
 The same steering artifact can be passed to `../evaluation/evaluate_mmlu_redux.py`
 with `--steering_direction_path`, `--steering_layer`, and `--alphas`.
+
+## Cross-Family Correction (thinking-on)
+
+`crossfamily-correction/` holds a later set of steering runs for Llama-3.1-8B-Instruct
+and Gemma-3-12B-IT, evaluated **thinking-on** with an empty system prompt.
+
+These are not the same runs as the thinking-off configuration documented above, and the
+two are not interchangeable: different direction vectors, different construction seeds,
+and different baselines.
+
+That work corrects an earlier thinking-on sweep which reported steering as null for both
+model families. The null was an artifact of searching over the raw multiplier `alpha`
+while the direction vectors are unit-normalised, so the same `alpha` means very different
+things at different layers and in different models — mean residual norms span 1.25 to 57
+across Llama's layers and 1,105 to 161,797 across Gemma's. Expressing strength as
+`r = alpha / mean_residual_norm_at_layer` and re-searching gives +45 pp on Gemma and
++16 pp on Llama on medium-stakes validation, with comparable moves on the held-out sets.
+
+Note: the thinking-off configuration documented above is the earlier one. The paper is
+moving to thinking-on evaluation for steering, to match how every other intervention in
+the paper is measured; this section will be reorganised once that change lands.
+
+See `crossfamily-correction/README.md`.

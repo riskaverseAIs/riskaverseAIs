@@ -1,0 +1,1515 @@
+{
+ "12|0": {
+  "layer": 12,
+  "ratio": 0.0,
+  "alpha": 0.0,
+  "residual_norm": 18.0732364654541,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 195,
+    "cooperated": 31,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 327.72,
+    "evaluator_cooperate_rate": 0.15897435897435896
+   },
+   {
+    "n": 200,
+    "parsed": 195,
+    "cooperated": 31,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 327.72,
+    "evaluator_cooperate_rate": 0.15897435897435896
+   },
+   {
+    "n": 200,
+    "parsed": 195,
+    "cooperated": 31,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 327.72,
+    "evaluator_cooperate_rate": 0.15897435897435896
+   }
+  ],
+  "n": 600,
+  "parsed": 585,
+  "cooperated": 93,
+  "parse_rate": 0.975,
+  "cooperate_rate": 0.15897435897435896,
+  "token_limit_rate": 0.0,
+  "degenerate_rate": 0.0,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 0.0,
+  "effect_se_pp": 1.511785677406398
+ },
+ "12|0.02": {
+  "layer": 12,
+  "ratio": 0.02,
+  "alpha": 0.361464729309082,
+  "residual_norm": 18.0732364654541,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 192,
+    "cooperated": 33,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 335.55,
+    "evaluator_cooperate_rate": 0.171875
+   },
+   {
+    "n": 200,
+    "parsed": 193,
+    "cooperated": 35,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 333.55,
+    "evaluator_cooperate_rate": 0.18134715025906736
+   },
+   {
+    "n": 200,
+    "parsed": 194,
+    "cooperated": 35,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 326.685,
+    "evaluator_cooperate_rate": 0.18041237113402062
+   }
+  ],
+  "n": 600,
+  "parsed": 579,
+  "cooperated": 103,
+  "parse_rate": 0.965,
+  "cooperate_rate": 0.17789291882556132,
+  "token_limit_rate": 0.0,
+  "degenerate_rate": 0.0,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 1.8918559851202361,
+  "effect_se_pp": 1.5195985753166859
+ },
+ "12|0.03": {
+  "layer": 12,
+  "ratio": 0.03,
+  "alpha": 0.542197093963623,
+  "residual_norm": 18.0732364654541,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 190,
+    "cooperated": 35,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 336.725,
+    "evaluator_cooperate_rate": 0.18421052631578946
+   },
+   {
+    "n": 200,
+    "parsed": 195,
+    "cooperated": 36,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 337.4,
+    "evaluator_cooperate_rate": 0.18461538461538463
+   },
+   {
+    "n": 200,
+    "parsed": 194,
+    "cooperated": 36,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 329.7,
+    "evaluator_cooperate_rate": 0.18556701030927836
+   }
+  ],
+  "n": 600,
+  "parsed": 579,
+  "cooperated": 107,
+  "parse_rate": 0.965,
+  "cooperate_rate": 0.1848013816925734,
+  "token_limit_rate": 0.0,
+  "degenerate_rate": 0.0,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 2.582702271821444,
+  "effect_se_pp": 1.5195985753166859
+ },
+ "12|0.045": {
+  "layer": 12,
+  "ratio": 0.045,
+  "alpha": 0.8132956409454345,
+  "residual_norm": 18.0732364654541,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 194,
+    "cooperated": 38,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 342.35,
+    "evaluator_cooperate_rate": 0.1958762886597938
+   },
+   {
+    "n": 200,
+    "parsed": 188,
+    "cooperated": 33,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 340.085,
+    "evaluator_cooperate_rate": 0.17553191489361702
+   },
+   {
+    "n": 200,
+    "parsed": 191,
+    "cooperated": 31,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 343.3,
+    "evaluator_cooperate_rate": 0.16230366492146597
+   }
+  ],
+  "n": 600,
+  "parsed": 573,
+  "cooperated": 102,
+  "parse_rate": 0.955,
+  "cooperate_rate": 0.17801047120418848,
+  "token_limit_rate": 0.0,
+  "degenerate_rate": 0.0,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 1.903611222982951,
+  "effect_se_pp": 1.527533869874396
+ },
+ "12|0.07": {
+  "layer": 12,
+  "ratio": 0.07,
+  "alpha": 1.2651265525817872,
+  "residual_norm": 18.0732364654541,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 187,
+    "cooperated": 27,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 337.915,
+    "evaluator_cooperate_rate": 0.1443850267379679
+   },
+   {
+    "n": 200,
+    "parsed": 192,
+    "cooperated": 34,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 343.235,
+    "evaluator_cooperate_rate": 0.17708333333333334
+   },
+   {
+    "n": 200,
+    "parsed": 190,
+    "cooperated": 35,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 347.64,
+    "evaluator_cooperate_rate": 0.18421052631578946
+   }
+  ],
+  "n": 600,
+  "parsed": 569,
+  "cooperated": 96,
+  "parse_rate": 0.9483333333333334,
+  "cooperate_rate": 0.1687170474516696,
+  "token_limit_rate": 0.0,
+  "degenerate_rate": 0.0,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor"
+  ],
+  "effect_vs_control_pp": 0.9742688477310635,
+  "effect_se_pp": 1.5328936543067477
+ },
+ "12|0.1": {
+  "layer": 12,
+  "ratio": 0.1,
+  "alpha": 1.8073236465454103,
+  "residual_norm": 18.0732364654541,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 194,
+    "cooperated": 40,
+    "token_limit": 2,
+    "degenerate": 0,
+    "mean_tokens": 411.66,
+    "evaluator_cooperate_rate": 0.20618556701030927
+   },
+   {
+    "n": 200,
+    "parsed": 192,
+    "cooperated": 43,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 354.255,
+    "evaluator_cooperate_rate": 0.22395833333333334
+   },
+   {
+    "n": 200,
+    "parsed": 187,
+    "cooperated": 41,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 372.295,
+    "evaluator_cooperate_rate": 0.2192513368983957
+   }
+  ],
+  "n": 600,
+  "parsed": 573,
+  "cooperated": 124,
+  "parse_rate": 0.955,
+  "cooperate_rate": 0.2164048865619546,
+  "token_limit_rate": 0.0033333333333333335,
+  "degenerate_rate": 0.0,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 5.743052758759565,
+  "effect_se_pp": 1.527533869874396
+ },
+ "12|0.15": {
+  "layer": 12,
+  "ratio": 0.15,
+  "alpha": 2.710985469818115,
+  "residual_norm": 18.0732364654541,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 195,
+    "cooperated": 64,
+    "token_limit": 3,
+    "degenerate": 2,
+    "mean_tokens": 421.945,
+    "evaluator_cooperate_rate": 0.3282051282051282
+   },
+   {
+    "n": 200,
+    "parsed": 191,
+    "cooperated": 52,
+    "token_limit": 2,
+    "degenerate": 2,
+    "mean_tokens": 399.61,
+    "evaluator_cooperate_rate": 0.27225130890052357
+   },
+   {
+    "n": 200,
+    "parsed": 190,
+    "cooperated": 49,
+    "token_limit": 2,
+    "degenerate": 2,
+    "mean_tokens": 404.675,
+    "evaluator_cooperate_rate": 0.2578947368421053
+   }
+  ],
+  "n": 600,
+  "parsed": 576,
+  "cooperated": 165,
+  "parse_rate": 0.96,
+  "cooperate_rate": 0.2864583333333333,
+  "token_limit_rate": 0.011666666666666667,
+  "degenerate_rate": 0.01,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 12.748397435897434,
+  "effect_se_pp": 1.5235507239295631
+ },
+ "12|0.22": {
+  "layer": 12,
+  "ratio": 0.22,
+  "alpha": 3.9761120223999025,
+  "residual_norm": 18.0732364654541,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 103,
+    "cooperated": 31,
+    "token_limit": 101,
+    "degenerate": 52,
+    "mean_tokens": 2332.74,
+    "evaluator_cooperate_rate": 0.30097087378640774
+   },
+   {
+    "n": 200,
+    "parsed": 112,
+    "cooperated": 40,
+    "token_limit": 87,
+    "degenerate": 49,
+    "mean_tokens": 2089.865,
+    "evaluator_cooperate_rate": 0.35714285714285715
+   },
+   {
+    "n": 200,
+    "parsed": 115,
+    "cooperated": 44,
+    "token_limit": 79,
+    "degenerate": 42,
+    "mean_tokens": 1905.035,
+    "evaluator_cooperate_rate": 0.3826086956521739
+   }
+  ],
+  "n": 600,
+  "parsed": 330,
+  "cooperated": 115,
+  "parse_rate": 0.55,
+  "cooperate_rate": 0.3484848484848485,
+  "token_limit_rate": 0.445,
+  "degenerate_rate": 0.23833333333333334,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor"
+  ],
+  "effect_vs_control_pp": 18.951048951048953,
+  "effect_se_pp": 2.012848969654181
+ },
+ "12|0.32": {
+  "layer": 12,
+  "ratio": 0.32,
+  "alpha": 5.783435668945312,
+  "residual_norm": 18.0732364654541,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 43,
+    "cooperated": 21,
+    "token_limit": 186,
+    "degenerate": 161,
+    "mean_tokens": 3833.68,
+    "evaluator_cooperate_rate": 0.4883720930232558
+   },
+   {
+    "n": 200,
+    "parsed": 45,
+    "cooperated": 21,
+    "token_limit": 189,
+    "degenerate": 166,
+    "mean_tokens": 3877.65,
+    "evaluator_cooperate_rate": 0.4666666666666667
+   },
+   {
+    "n": 200,
+    "parsed": 38,
+    "cooperated": 18,
+    "token_limit": 189,
+    "degenerate": 174,
+    "mean_tokens": 3883.52,
+    "evaluator_cooperate_rate": 0.47368421052631576
+   }
+  ],
+  "n": 600,
+  "parsed": 126,
+  "cooperated": 60,
+  "parse_rate": 0.21,
+  "cooperate_rate": 0.47619047619047616,
+  "token_limit_rate": 0.94,
+  "degenerate_rate": 0.835,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor"
+  ],
+  "effect_vs_control_pp": 31.72161172161172,
+  "effect_se_pp": 3.257488468751906
+ },
+ "12|0.45": {
+  "layer": 12,
+  "ratio": 0.45,
+  "alpha": 8.132956409454346,
+  "residual_norm": 18.0732364654541,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 199,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   },
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 199,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   },
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 198,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   }
+  ],
+  "n": 600,
+  "parsed": 0,
+  "cooperated": 0,
+  "parse_rate": 0.0,
+  "cooperate_rate": null,
+  "token_limit_rate": 1.0,
+  "degenerate_rate": 0.9933333333333333,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor",
+   "no_parsed_answers"
+  ],
+  "effect_vs_control_pp": null,
+  "effect_se_pp": 36.56521737430951
+ },
+ "12|0.63": {
+  "layer": 12,
+  "ratio": 0.63,
+  "alpha": 11.386138973236084,
+  "residual_norm": 18.0732364654541,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 200,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   },
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 200,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   },
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 200,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   }
+  ],
+  "n": 600,
+  "parsed": 0,
+  "cooperated": 0,
+  "parse_rate": 0.0,
+  "cooperate_rate": null,
+  "token_limit_rate": 1.0,
+  "degenerate_rate": 1.0,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor",
+   "no_parsed_answers"
+  ],
+  "effect_vs_control_pp": null,
+  "effect_se_pp": 36.56521737430951
+ },
+ "12|0.85": {
+  "layer": 12,
+  "ratio": 0.85,
+  "alpha": 15.362250995635986,
+  "residual_norm": 18.0732364654541,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 200,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   },
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 200,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   },
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 200,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   }
+  ],
+  "n": 600,
+  "parsed": 0,
+  "cooperated": 0,
+  "parse_rate": 0.0,
+  "cooperate_rate": null,
+  "token_limit_rate": 1.0,
+  "degenerate_rate": 1.0,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor",
+   "no_parsed_answers"
+  ],
+  "effect_vs_control_pp": null,
+  "effect_se_pp": 36.56521737430951
+ },
+ "12|1.15": {
+  "layer": 12,
+  "ratio": 1.15,
+  "alpha": 20.784221935272214,
+  "residual_norm": 18.0732364654541,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 200,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   },
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 200,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   },
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 200,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   }
+  ],
+  "n": 600,
+  "parsed": 0,
+  "cooperated": 0,
+  "parse_rate": 0.0,
+  "cooperate_rate": null,
+  "token_limit_rate": 1.0,
+  "degenerate_rate": 1.0,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor",
+   "no_parsed_answers"
+  ],
+  "effect_vs_control_pp": null,
+  "effect_se_pp": 36.56521737430951
+ },
+ "12|1.5": {
+  "layer": 12,
+  "ratio": 1.5,
+  "alpha": 27.109854698181152,
+  "residual_norm": 18.0732364654541,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 200,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   },
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 200,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   },
+   {
+    "n": 200,
+    "parsed": 0,
+    "cooperated": 0,
+    "token_limit": 200,
+    "degenerate": 200,
+    "mean_tokens": 4096.0,
+    "evaluator_cooperate_rate": 0
+   }
+  ],
+  "n": 600,
+  "parsed": 0,
+  "cooperated": 0,
+  "parse_rate": 0.0,
+  "cooperate_rate": null,
+  "token_limit_rate": 1.0,
+  "degenerate_rate": 1.0,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor",
+   "no_parsed_answers"
+  ],
+  "effect_vs_control_pp": null,
+  "effect_se_pp": 36.56521737430951
+ },
+ "8|0.1": {
+  "layer": 8,
+  "ratio": 0.1,
+  "alpha": 1.6311601638793947,
+  "residual_norm": 16.311601638793945,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 196,
+    "cooperated": 51,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 332.14,
+    "evaluator_cooperate_rate": 0.2602040816326531
+   },
+   {
+    "n": 200,
+    "parsed": 195,
+    "cooperated": 47,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 327.395,
+    "evaluator_cooperate_rate": 0.24102564102564103
+   },
+   {
+    "n": 200,
+    "parsed": 198,
+    "cooperated": 45,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 333.945,
+    "evaluator_cooperate_rate": 0.22727272727272727
+   }
+  ],
+  "n": 600,
+  "parsed": 589,
+  "cooperated": 143,
+  "parse_rate": 0.9816666666666667,
+  "cooperate_rate": 0.2427843803056027,
+  "token_limit_rate": 0.0,
+  "degenerate_rate": 0.0,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 8.381002133124374,
+  "effect_se_pp": 1.5066435343538853
+ },
+ "8|0.15": {
+  "layer": 8,
+  "ratio": 0.15,
+  "alpha": 2.446740245819092,
+  "residual_norm": 16.311601638793945,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 198,
+    "cooperated": 68,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 313.775,
+    "evaluator_cooperate_rate": 0.3434343434343434
+   },
+   {
+    "n": 200,
+    "parsed": 197,
+    "cooperated": 70,
+    "token_limit": 2,
+    "degenerate": 0,
+    "mean_tokens": 349.655,
+    "evaluator_cooperate_rate": 0.3553299492385787
+   },
+   {
+    "n": 200,
+    "parsed": 199,
+    "cooperated": 67,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 302.115,
+    "evaluator_cooperate_rate": 0.33668341708542715
+   }
+  ],
+  "n": 600,
+  "parsed": 594,
+  "cooperated": 205,
+  "parse_rate": 0.99,
+  "cooperate_rate": 0.3451178451178451,
+  "token_limit_rate": 0.0033333333333333335,
+  "degenerate_rate": 0.0,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 18.614348614348614,
+  "effect_se_pp": 1.5002890415290533
+ },
+ "8|0.22": {
+  "layer": 8,
+  "ratio": 0.22,
+  "alpha": 3.588552360534668,
+  "residual_norm": 16.311601638793945,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 177,
+    "cooperated": 73,
+    "token_limit": 16,
+    "degenerate": 10,
+    "mean_tokens": 655.645,
+    "evaluator_cooperate_rate": 0.4124293785310734
+   },
+   {
+    "n": 200,
+    "parsed": 173,
+    "cooperated": 73,
+    "token_limit": 11,
+    "degenerate": 6,
+    "mean_tokens": 518.555,
+    "evaluator_cooperate_rate": 0.42196531791907516
+   },
+   {
+    "n": 200,
+    "parsed": 174,
+    "cooperated": 75,
+    "token_limit": 9,
+    "degenerate": 7,
+    "mean_tokens": 513.65,
+    "evaluator_cooperate_rate": 0.43103448275862066
+   }
+  ],
+  "n": 600,
+  "parsed": 524,
+  "cooperated": 221,
+  "parse_rate": 0.8733333333333333,
+  "cooperate_rate": 0.4217557251908397,
+  "token_limit_rate": 0.06,
+  "degenerate_rate": 0.03833333333333333,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor"
+  ],
+  "effect_vs_control_pp": 26.278136621648073,
+  "effect_se_pp": 1.5973589376313442
+ },
+ "10|0.1": {
+  "layer": 10,
+  "ratio": 0.1,
+  "alpha": 1.7105243682861329,
+  "residual_norm": 17.105243682861328,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 196,
+    "cooperated": 54,
+    "token_limit": 1,
+    "degenerate": 0,
+    "mean_tokens": 348.985,
+    "evaluator_cooperate_rate": 0.2755102040816326
+   },
+   {
+    "n": 200,
+    "parsed": 197,
+    "cooperated": 39,
+    "token_limit": 1,
+    "degenerate": 0,
+    "mean_tokens": 342.915,
+    "evaluator_cooperate_rate": 0.19796954314720813
+   },
+   {
+    "n": 200,
+    "parsed": 192,
+    "cooperated": 41,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 333.49,
+    "evaluator_cooperate_rate": 0.21354166666666666
+   }
+  ],
+  "n": 600,
+  "parsed": 585,
+  "cooperated": 134,
+  "parse_rate": 0.975,
+  "cooperate_rate": 0.22905982905982905,
+  "token_limit_rate": 0.0033333333333333335,
+  "degenerate_rate": 0.0,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 7.0085470085470085,
+  "effect_se_pp": 1.511785677406398
+ },
+ "10|0.15": {
+  "layer": 10,
+  "ratio": 0.15,
+  "alpha": 2.565786552429199,
+  "residual_norm": 17.105243682861328,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 195,
+    "cooperated": 58,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 328.67,
+    "evaluator_cooperate_rate": 0.29743589743589743
+   },
+   {
+    "n": 200,
+    "parsed": 194,
+    "cooperated": 57,
+    "token_limit": 1,
+    "degenerate": 1,
+    "mean_tokens": 347.755,
+    "evaluator_cooperate_rate": 0.29381443298969073
+   },
+   {
+    "n": 200,
+    "parsed": 194,
+    "cooperated": 66,
+    "token_limit": 1,
+    "degenerate": 0,
+    "mean_tokens": 352.065,
+    "evaluator_cooperate_rate": 0.3402061855670103
+   }
+  ],
+  "n": 600,
+  "parsed": 583,
+  "cooperated": 181,
+  "parse_rate": 0.9716666666666667,
+  "cooperate_rate": 0.31046312178387653,
+  "token_limit_rate": 0.0033333333333333335,
+  "degenerate_rate": 0.0016666666666666668,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 15.148876280951756,
+  "effect_se_pp": 1.5143765716420843
+ },
+ "10|0.22": {
+  "layer": 10,
+  "ratio": 0.22,
+  "alpha": 3.7631536102294922,
+  "residual_norm": 17.105243682861328,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 190,
+    "cooperated": 78,
+    "token_limit": 7,
+    "degenerate": 5,
+    "mean_tokens": 456.02,
+    "evaluator_cooperate_rate": 0.4105263157894737
+   },
+   {
+    "n": 200,
+    "parsed": 192,
+    "cooperated": 65,
+    "token_limit": 4,
+    "degenerate": 3,
+    "mean_tokens": 393.155,
+    "evaluator_cooperate_rate": 0.3385416666666667
+   },
+   {
+    "n": 200,
+    "parsed": 188,
+    "cooperated": 74,
+    "token_limit": 8,
+    "degenerate": 6,
+    "mean_tokens": 492.975,
+    "evaluator_cooperate_rate": 0.39361702127659576
+   }
+  ],
+  "n": 600,
+  "parsed": 570,
+  "cooperated": 217,
+  "parse_rate": 0.95,
+  "cooperate_rate": 0.38070175438596493,
+  "token_limit_rate": 0.03166666666666667,
+  "degenerate_rate": 0.023333333333333334,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 22.172739541160595,
+  "effect_se_pp": 1.5315484204764946
+ },
+ "14|0.1": {
+  "layer": 14,
+  "ratio": 0.1,
+  "alpha": 1.8823167800903322,
+  "residual_norm": 18.82316780090332,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 196,
+    "cooperated": 45,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 363.93,
+    "evaluator_cooperate_rate": 0.22959183673469388
+   },
+   {
+    "n": 200,
+    "parsed": 192,
+    "cooperated": 44,
+    "token_limit": 2,
+    "degenerate": 0,
+    "mean_tokens": 396.625,
+    "evaluator_cooperate_rate": 0.22916666666666666
+   },
+   {
+    "n": 200,
+    "parsed": 190,
+    "cooperated": 39,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 358.93,
+    "evaluator_cooperate_rate": 0.20526315789473684
+   }
+  ],
+  "n": 600,
+  "parsed": 578,
+  "cooperated": 128,
+  "parse_rate": 0.9633333333333334,
+  "cooperate_rate": 0.22145328719723184,
+  "token_limit_rate": 0.0033333333333333335,
+  "degenerate_rate": 0.0,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 6.247892822287287,
+  "effect_se_pp": 1.5209125388784954
+ },
+ "14|0.15": {
+  "layer": 14,
+  "ratio": 0.15,
+  "alpha": 2.823475170135498,
+  "residual_norm": 18.82316780090332,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 184,
+    "cooperated": 37,
+    "token_limit": 8,
+    "degenerate": 3,
+    "mean_tokens": 528.055,
+    "evaluator_cooperate_rate": 0.20108695652173914
+   },
+   {
+    "n": 200,
+    "parsed": 185,
+    "cooperated": 32,
+    "token_limit": 5,
+    "degenerate": 3,
+    "mean_tokens": 457.175,
+    "evaluator_cooperate_rate": 0.17297297297297298
+   },
+   {
+    "n": 200,
+    "parsed": 190,
+    "cooperated": 42,
+    "token_limit": 2,
+    "degenerate": 2,
+    "mean_tokens": 416.265,
+    "evaluator_cooperate_rate": 0.22105263157894736
+   }
+  ],
+  "n": 600,
+  "parsed": 559,
+  "cooperated": 111,
+  "parse_rate": 0.9316666666666666,
+  "cooperate_rate": 0.19856887298747763,
+  "token_limit_rate": 0.025,
+  "degenerate_rate": 0.013333333333333334,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor"
+  ],
+  "effect_vs_control_pp": 3.959451401311867,
+  "effect_se_pp": 1.5465439117255482
+ },
+ "14|0.22": {
+  "layer": 14,
+  "ratio": 0.22,
+  "alpha": 4.14109691619873,
+  "residual_norm": 18.82316780090332,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 157,
+    "cooperated": 50,
+    "token_limit": 42,
+    "degenerate": 22,
+    "mean_tokens": 1160.43,
+    "evaluator_cooperate_rate": 0.3184713375796178
+   },
+   {
+    "n": 200,
+    "parsed": 157,
+    "cooperated": 44,
+    "token_limit": 41,
+    "degenerate": 25,
+    "mean_tokens": 1148.155,
+    "evaluator_cooperate_rate": 0.2802547770700637
+   },
+   {
+    "n": 200,
+    "parsed": 153,
+    "cooperated": 47,
+    "token_limit": 36,
+    "degenerate": 20,
+    "mean_tokens": 1065.14,
+    "evaluator_cooperate_rate": 0.30718954248366015
+   }
+  ],
+  "n": 600,
+  "parsed": 467,
+  "cooperated": 141,
+  "parse_rate": 0.7783333333333333,
+  "cooperate_rate": 0.3019271948608137,
+  "token_limit_rate": 0.19833333333333333,
+  "degenerate_rate": 0.11166666666666666,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor"
+  ],
+  "effect_vs_control_pp": 14.295283588645475,
+  "effect_se_pp": 1.6920364690174452
+ },
+ "16|0.1": {
+  "layer": 16,
+  "ratio": 0.1,
+  "alpha": 2.088642120361328,
+  "residual_norm": 20.88642120361328,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 195,
+    "cooperated": 43,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 324.675,
+    "evaluator_cooperate_rate": 0.2205128205128205
+   },
+   {
+    "n": 200,
+    "parsed": 196,
+    "cooperated": 46,
+    "token_limit": 1,
+    "degenerate": 1,
+    "mean_tokens": 341.32,
+    "evaluator_cooperate_rate": 0.23469387755102042
+   },
+   {
+    "n": 200,
+    "parsed": 196,
+    "cooperated": 48,
+    "token_limit": 1,
+    "degenerate": 1,
+    "mean_tokens": 332.87,
+    "evaluator_cooperate_rate": 0.24489795918367346
+   }
+  ],
+  "n": 600,
+  "parsed": 587,
+  "cooperated": 137,
+  "parse_rate": 0.9783333333333334,
+  "cooperate_rate": 0.23339011925042588,
+  "token_limit_rate": 0.0033333333333333335,
+  "degenerate_rate": 0.0033333333333333335,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 7.441576027606692,
+  "effect_se_pp": 1.509208035842743
+ },
+ "16|0.15": {
+  "layer": 16,
+  "ratio": 0.15,
+  "alpha": 3.132963180541992,
+  "residual_norm": 20.88642120361328,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 189,
+    "cooperated": 41,
+    "token_limit": 1,
+    "degenerate": 1,
+    "mean_tokens": 344.77,
+    "evaluator_cooperate_rate": 0.21693121693121692
+   },
+   {
+    "n": 200,
+    "parsed": 193,
+    "cooperated": 47,
+    "token_limit": 3,
+    "degenerate": 0,
+    "mean_tokens": 396.085,
+    "evaluator_cooperate_rate": 0.24352331606217617
+   },
+   {
+    "n": 200,
+    "parsed": 195,
+    "cooperated": 46,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 329.42,
+    "evaluator_cooperate_rate": 0.2358974358974359
+   }
+  ],
+  "n": 600,
+  "parsed": 577,
+  "cooperated": 134,
+  "parse_rate": 0.9616666666666667,
+  "cooperate_rate": 0.2322357019064125,
+  "token_limit_rate": 0.006666666666666667,
+  "degenerate_rate": 0.0016666666666666668,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 7.326134293205352,
+  "effect_se_pp": 1.5222299168118216
+ },
+ "16|0.22": {
+  "layer": 16,
+  "ratio": 0.22,
+  "alpha": 4.595012664794922,
+  "residual_norm": 20.88642120361328,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 185,
+    "cooperated": 54,
+    "token_limit": 7,
+    "degenerate": 5,
+    "mean_tokens": 474.845,
+    "evaluator_cooperate_rate": 0.2918918918918919
+   },
+   {
+    "n": 200,
+    "parsed": 180,
+    "cooperated": 49,
+    "token_limit": 7,
+    "degenerate": 6,
+    "mean_tokens": 485.89,
+    "evaluator_cooperate_rate": 0.2722222222222222
+   },
+   {
+    "n": 200,
+    "parsed": 185,
+    "cooperated": 40,
+    "token_limit": 6,
+    "degenerate": 4,
+    "mean_tokens": 471.07,
+    "evaluator_cooperate_rate": 0.21621621621621623
+   }
+  ],
+  "n": 600,
+  "parsed": 550,
+  "cooperated": 143,
+  "parse_rate": 0.9166666666666666,
+  "cooperate_rate": 0.26,
+  "token_limit_rate": 0.03333333333333333,
+  "degenerate_rate": 0.025,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor"
+  ],
+  "effect_vs_control_pp": 10.102564102564104,
+  "effect_se_pp": 1.5591461075802802
+ },
+ "10|0.187": {
+  "layer": 10,
+  "ratio": 0.187,
+  "alpha": 3.1986805686950683,
+  "residual_norm": 17.105243682861328,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 187,
+    "cooperated": 64,
+    "token_limit": 4,
+    "degenerate": 4,
+    "mean_tokens": 436.755,
+    "evaluator_cooperate_rate": 0.3422459893048128
+   },
+   {
+    "n": 200,
+    "parsed": 192,
+    "cooperated": 63,
+    "token_limit": 3,
+    "degenerate": 2,
+    "mean_tokens": 383.355,
+    "evaluator_cooperate_rate": 0.328125
+   },
+   {
+    "n": 200,
+    "parsed": 189,
+    "cooperated": 64,
+    "token_limit": 4,
+    "degenerate": 3,
+    "mean_tokens": 408.1,
+    "evaluator_cooperate_rate": 0.3386243386243386
+   }
+  ],
+  "n": 600,
+  "parsed": 568,
+  "cooperated": 191,
+  "parse_rate": 0.9466666666666667,
+  "cooperate_rate": 0.3362676056338028,
+  "token_limit_rate": 0.018333333333333333,
+  "degenerate_rate": 0.015,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor"
+  ],
+  "effect_vs_control_pp": 17.729324665944386,
+  "effect_se_pp": 1.5342424391293377
+ },
+ "10|0.2596": {
+  "layer": 10,
+  "ratio": 0.2596,
+  "alpha": 4.440521260070801,
+  "residual_norm": 17.105243682861328,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 153,
+    "cooperated": 64,
+    "token_limit": 39,
+    "degenerate": 24,
+    "mean_tokens": 1046.64,
+    "evaluator_cooperate_rate": 0.41830065359477125
+   },
+   {
+    "n": 200,
+    "parsed": 157,
+    "cooperated": 76,
+    "token_limit": 34,
+    "degenerate": 18,
+    "mean_tokens": 947.88,
+    "evaluator_cooperate_rate": 0.4840764331210191
+   },
+   {
+    "n": 200,
+    "parsed": 164,
+    "cooperated": 83,
+    "token_limit": 39,
+    "degenerate": 27,
+    "mean_tokens": 1037.46,
+    "evaluator_cooperate_rate": 0.5060975609756098
+   }
+  ],
+  "n": 600,
+  "parsed": 474,
+  "cooperated": 223,
+  "parse_rate": 0.79,
+  "cooperate_rate": 0.4704641350210971,
+  "token_limit_rate": 0.18666666666666668,
+  "degenerate_rate": 0.115,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor"
+  ],
+  "effect_vs_control_pp": 31.14897760467381,
+  "effect_se_pp": 1.6794960576492273
+ },
+ "9|0.22": {
+  "layer": 9,
+  "ratio": 0.22,
+  "alpha": 3.6912644577026366,
+  "residual_norm": 16.778474807739258,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 169,
+    "cooperated": 68,
+    "token_limit": 13,
+    "degenerate": 9,
+    "mean_tokens": 597.07,
+    "evaluator_cooperate_rate": 0.40236686390532544
+   },
+   {
+    "n": 200,
+    "parsed": 156,
+    "cooperated": 62,
+    "token_limit": 21,
+    "degenerate": 17,
+    "mean_tokens": 729.955,
+    "evaluator_cooperate_rate": 0.3974358974358974
+   },
+   {
+    "n": 200,
+    "parsed": 165,
+    "cooperated": 69,
+    "token_limit": 13,
+    "degenerate": 11,
+    "mean_tokens": 569.49,
+    "evaluator_cooperate_rate": 0.41818181818181815
+   }
+  ],
+  "n": 600,
+  "parsed": 490,
+  "cooperated": 199,
+  "parse_rate": 0.8166666666666667,
+  "cooperate_rate": 0.4061224489795918,
+  "token_limit_rate": 0.07833333333333334,
+  "degenerate_rate": 0.06166666666666667,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor"
+  ],
+  "effect_vs_control_pp": 24.714809000523285,
+  "effect_se_pp": 1.6518481434568522
+ },
+ "11|0.22": {
+  "layer": 11,
+  "ratio": 0.22,
+  "alpha": 3.8076514434814452,
+  "residual_norm": 17.307506561279297,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 165,
+    "cooperated": 47,
+    "token_limit": 34,
+    "degenerate": 21,
+    "mean_tokens": 1023.745,
+    "evaluator_cooperate_rate": 0.28484848484848485
+   },
+   {
+    "n": 200,
+    "parsed": 174,
+    "cooperated": 52,
+    "token_limit": 23,
+    "degenerate": 12,
+    "mean_tokens": 793.33,
+    "evaluator_cooperate_rate": 0.2988505747126437
+   },
+   {
+    "n": 200,
+    "parsed": 183,
+    "cooperated": 53,
+    "token_limit": 25,
+    "degenerate": 19,
+    "mean_tokens": 831.57,
+    "evaluator_cooperate_rate": 0.2896174863387978
+   }
+  ],
+  "n": 600,
+  "parsed": 522,
+  "cooperated": 152,
+  "parse_rate": 0.87,
+  "cooperate_rate": 0.29118773946360155,
+  "token_limit_rate": 0.13666666666666666,
+  "degenerate_rate": 0.08666666666666667,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor"
+  ],
+  "effect_vs_control_pp": 13.221338048924258,
+  "effect_se_pp": 1.6004160867203108
+ },
+ "6|0.15": {
+  "layer": 6,
+  "ratio": 0.15,
+  "alpha": 2.2726248264312745,
+  "residual_norm": 15.150832176208496,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 171,
+    "cooperated": 65,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 341.6,
+    "evaluator_cooperate_rate": 0.38011695906432746
+   },
+   {
+    "n": 200,
+    "parsed": 168,
+    "cooperated": 55,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 352.355,
+    "evaluator_cooperate_rate": 0.3273809523809524
+   },
+   {
+    "n": 200,
+    "parsed": 161,
+    "cooperated": 75,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 313.255,
+    "evaluator_cooperate_rate": 0.4658385093167702
+   }
+  ],
+  "n": 600,
+  "parsed": 500,
+  "cooperated": 195,
+  "parse_rate": 0.8333333333333334,
+  "cooperate_rate": 0.39,
+  "token_limit_rate": 0.0,
+  "degenerate_rate": 0.0,
+  "eligible": false,
+  "ineligible_reasons": [
+   "below_parse_floor"
+  ],
+  "effect_vs_control_pp": 23.102564102564106,
+  "effect_se_pp": 1.6352462332202489,
+  "post_hoc": true
+ },
+ "7|0.15": {
+  "layer": 7,
+  "ratio": 0.15,
+  "alpha": 2.375946378707886,
+  "residual_norm": 15.839642524719238,
+  "runs": [
+   {
+    "n": 200,
+    "parsed": 198,
+    "cooperated": 60,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 261.185,
+    "evaluator_cooperate_rate": 0.30303030303030304
+   },
+   {
+    "n": 200,
+    "parsed": 190,
+    "cooperated": 50,
+    "token_limit": 0,
+    "degenerate": 0,
+    "mean_tokens": 252.19,
+    "evaluator_cooperate_rate": 0.2631578947368421
+   },
+   {
+    "n": 200,
+    "parsed": 195,
+    "cooperated": 58,
+    "token_limit": 1,
+    "degenerate": 1,
+    "mean_tokens": 280.155,
+    "evaluator_cooperate_rate": 0.29743589743589743
+   }
+  ],
+  "n": 600,
+  "parsed": 583,
+  "cooperated": 168,
+  "parse_rate": 0.9716666666666667,
+  "cooperate_rate": 0.2881646655231561,
+  "token_limit_rate": 0.0016666666666666668,
+  "degenerate_rate": 0.0016666666666666668,
+  "eligible": true,
+  "ineligible_reasons": [],
+  "effect_vs_control_pp": 12.919030654879716,
+  "effect_se_pp": 1.5143765716420843,
+  "post_hoc": true
+ }
+}
