@@ -10,7 +10,10 @@ directory per intervention:
 - `tie-training/`: supervised tie-training instructions using the shared SFT trainer.
 - `dpo-training/`: DPO trainer plus a helper to build the 600-pair lin-only JSONL.
 - `reward-model/`: reward-model fine-tuning pipeline and RewardBench 2 evaluation.
-- `steering/`: activation-steering instructions and direction-building helpers.
+- `steering/`: activation-steering instructions and direction-building helpers. Note that
+  steering is evaluated two ways — thinking-on (the paper's main results) and thinking-off
+  (an appendix comparison); `steering/README.md` explains which is which, and the two sets
+  of numbers are not interchangeable.
 - `dataset-generation/`: scripts used to generate the paper's benchmark CSVs.
 
 Each method directory has its own README with the paper-facing commands. The

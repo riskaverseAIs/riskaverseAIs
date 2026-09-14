@@ -1,23 +1,84 @@
 # Steering
 
-This directory contains the paper's steering workflow. The paper-facing method
-is mean-difference activation steering (CAA-mean), and steering is evaluated in
-thinking-off mode.
+Activation steering with mean-difference directions (CAA-mean): a single unit-normalised
+direction is added to the residual stream at one layer, at every token position, during
+generation. Nothing is trained.
 
-## Install
+## Read this first — there are two evaluation modes
 
-There is no separate requirements file for this directory. The steering scripts
-import from the shared evaluation package, so install the evaluation
-requirements first:
+Steering is the one method in this paper evaluated two different ways, and the two sets of
+numbers are **not** interchangeable. Baselines differ between them, so a row from one can
+never sit beside a row from the other.
 
-```bash
-pip install -r ../evaluation/requirements.txt
-```
+| | thinking-ON | thinking-OFF |
+|---|---|---|
+| chain-of-thought at inference | enabled | disabled |
+| role in the paper | **main results** | appendix comparison |
+| system prompt at construction | empty | the gamble system prompt |
+| construction seeds | 1-5 | 12345, 23456, 34567, 45678, 56789 |
+| where | [`crossfamily-correction/`](crossfamily-correction/) | this file, below |
+| models | Llama-3.1-8B, Gemma-3-12B | all five |
 
-## Build a Steering Direction
+The paper's main steering table uses **thinking-on**, so that steering is measured the same
+way as SFT, DPO, tie training and RMFT. The thinking-off configuration is retained because
+the comparison between the two modes is a result in its own right: the effect of a steering
+vector depends heavily on whether the model is allowed to reason before answering.
 
-The direction builder uses the 600-row lin-only low-stakes CoT file. The locked
-Qwen3-8B configuration captures the direction at layer 18:
+Neither configuration is obsolete. Nothing here has been retired.
+
+---
+
+## Strength is a ratio, not a raw alpha
+
+This matters more than anything else on this page.
+
+The direction is unit-normalised, so the raw multiplier `alpha` says nothing on its own about
+how large the intervention is relative to the activations it perturbs. Mean residual-stream
+norms run from 1.25 to 57 across Llama's layers and from 1,105 to 161,797 across Gemma's,
+with Gemma roughly 2000x Llama at comparable depth. A grid over raw `alpha` therefore lands
+in a different effective region for every model and every layer.
+
+Search and report
+
+    r = alpha / mean_residual_norm_at_layer
+
+Searching in raw alpha is what produced the withdrawn null results for Llama and Gemma. See
+[`crossfamily-correction/`](crossfamily-correction/) for the full account and the measured
+per-layer norms.
+
+Mean residual norm is prompt-dependent — about 17% variation on Gemma between two reasonable
+measuring prompts — so a ratio is only meaningful alongside the prompt used to measure it.
+
+---
+
+## Main results: thinking-on
+
+Llama-3.1-8B-Instruct and Gemma-3-12B-IT, with the full hyperparameter search, the
+five-vector paper runs, every individual answer, and the code:
+
+**[`crossfamily-correction/`](crossfamily-correction/)**
+
+| model | layer (0-based) | r | alpha |
+|---|---:|---:|---:|
+| Llama-3.1-8B-Instruct | 8 | 0.15 | 2.446740245819092 |
+| Gemma-3-12B-IT | 16 | 0.07 | 2421.8088671875 |
+
+Evaluated thinking-on with an empty system prompt, direction added at all token positions.
+
+---
+
+## Appendix comparison: thinking-off
+
+The locked Qwen3-8B thinking-off configuration:
+
+- direction construction: `CAA-mean`
+- eval layer: `18`
+- steering strength: `34`
+- thinking: off
+
+### Build a direction
+
+The direction builder uses the 600-row lin-only low-stakes CoT file:
 
 ```bash
 python build_steering_direction.py \
@@ -25,30 +86,12 @@ python build_steering_direction.py \
   --training_csv ../evaluation/data/2026_03_22_low_stakes_training_set_600_situations_with_CoTs_lin_only.csv \
   --dataset_alias medium_stakes_validation \
   --position mean_response \
-  --layer 18 \
   --num_situations 200 \
   --seed 12345 \
   --output steering_qwen3_8b.pt
 ```
 
-If `--layer` is omitted, the builder defaults to the model's middle layer
-(layer 18 for the 36-layer Qwen3-8B, so the default matches the locked
-configuration for that model).
-
-To build directions for many layers in one pass (useful for layer sweeps), use
-`build_steering_directions_multi.py`, which loads the model once and writes one
-direction file per requested layer.
-
-## Locked Qwen3-8B Evaluation
-
-The locked Qwen3-8B paper configuration is:
-
-- direction construction: `CAA-mean`
-- eval layer: `18`
-- steering strength: `34`
-- thinking: off
-
-Evaluate it with the shared evaluator:
+### Evaluate it
 
 ```bash
 python ../evaluation/evaluate.py \
@@ -69,30 +112,26 @@ For the held-out runs, swap the dataset alias to:
 - `astronomical_stakes_deployment`
 - `steals_test`
 
-## Capability Retention
+### Capability retention
 
 The same steering artifact can be passed to `../evaluation/evaluate_mmlu_redux.py`
 with `--steering_direction_path`, `--steering_layer`, and `--alphas`.
 
-## Cross-Family Correction (thinking-on)
+---
 
-`crossfamily-correction/` holds a later set of steering runs for Llama-3.1-8B-Instruct
-and Gemma-3-12B-IT, evaluated **thinking-on** with an empty system prompt.
+## Code in this directory
 
-These are not the same runs as the thinking-off configuration documented above, and the
-two are not interchangeable: different direction vectors, different construction seeds,
-and different baselines.
+| file | what it does |
+|---|---|
+| `build_steering_direction.py` | builds one direction for one model and seed |
+| `build_steering_directions_multi.py` | batched all-layer extraction across seeds |
+| `vllm_steering.py` | the vLLM hook that adds the direction during generation |
 
-That work corrects an earlier thinking-on sweep which reported steering as null for both
-model families. The null was an artifact of searching over the raw multiplier `alpha`
-while the direction vectors are unit-normalised, so the same `alpha` means very different
-things at different layers and in different models — mean residual norms span 1.25 to 57
-across Llama's layers and 1,105 to 161,797 across Gemma's. Expressing strength as
-`r = alpha / mean_residual_norm_at_layer` and re-searching gives +45 pp on Gemma and
-+16 pp on Llama on medium-stakes validation, with comparable moves on the held-out sets.
+These are shared by both evaluation modes. The thinking-on runs additionally used the
+runners in [`crossfamily-correction/code/`](crossfamily-correction/code/).
 
-Note: the thinking-off configuration documented above is the earlier one. The paper is
-moving to thinking-on evaluation for steering, to match how every other intervention in
-the paper is measured; this section will be reorganised once that change lands.
+## Direction vectors
 
-See `crossfamily-correction/README.md`.
+The vectors themselves are not in this repository. They live in the private adapter archive
+under `paper_adapters/steering/` (thinking-off) and `paper_adapters/steering_thinking_on/`
+(thinking-on).
