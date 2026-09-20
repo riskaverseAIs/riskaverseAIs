@@ -13,18 +13,23 @@ never sit beside a row from the other.
 | | thinking-ON | thinking-OFF |
 |---|---|---|
 | chain-of-thought at inference | enabled | disabled |
-| role in the paper | **main results** | appendix comparison |
+| role in the paper | **every steering number in the paper** | none; kept as a methodological comparison |
 | system prompt at construction | empty for Llama and Gemma, the gamble system prompt for the three Qwen models | the gamble system prompt |
 | construction seeds | 1-5 | 12345, 23456, 34567, 45678, 56789 |
 | where | [`crossfamily-correction/`](crossfamily-correction/) for Llama and Gemma, [`qwen-thinking-on/`](qwen-thinking-on/) for the Qwen models | this file, below |
 | models | all five | all five |
 
-The paper's main steering table uses **thinking-on**, so that steering is measured the same
-way as SFT, DPO, tie training and RMFT. The thinking-off configuration is retained because
-the comparison between the two modes is a result in its own right: the effect of a steering
-vector depends heavily on whether the model is allowed to reason before answering.
+The paper uses **thinking-on** throughout, so that steering is measured the same way as
+SFT, DPO, tie training and RMFT. That includes the capability-retention row: the paper's
+47.7% MMLU-Redux figure comes from the thinking-on layer 12 / alpha 32 build, not from the
+thinking-off one, which scored 72.07% and so showed almost no drop from its 71.32%
+baseline.
 
-Neither configuration is obsolete. Nothing here has been retired.
+**No number in the paper depends on the thinking-off build.** It is kept here because the
+contrast between the two modes is informative in its own right — the effect of a steering
+vector depends heavily on whether the model is allowed to reason before answering, and the
+two builds differ by 24 points of MMLU accuracy at comparable cooperate rates — but it is
+not cited anywhere, and it should not be read as an appendix result.
 
 ---
 
@@ -91,7 +96,7 @@ for Gemma.
 
 ---
 
-## Appendix comparison: thinking-off
+## Methodological comparison: thinking-off (not cited in the paper)
 
 The locked Qwen3-8B thinking-off configuration:
 

@@ -17,10 +17,10 @@ directory per intervention:
 - `tie-training/`: supervised tie-training instructions using the shared SFT trainer.
 - `dpo-training/`: DPO trainer plus a helper to build the 600-pair lin-only JSONL.
 - `reward-model/`: reward-model fine-tuning pipeline and RewardBench 2 evaluation.
-- `steering/`: activation-steering instructions and direction-building helpers. Note that
-  steering is evaluated two ways — thinking-on (the paper's main results) and thinking-off
-  (an appendix comparison); `steering/README.md` explains which is which, and the two sets
-  of numbers are not interchangeable.
+- `steering/`: activation-steering instructions and direction-building helpers. Every
+  steering number in the paper is the thinking-on build; the thinking-off build is kept
+  here as a methodological comparison only. `steering/README.md` explains which is which,
+  and the two sets of numbers are not interchangeable.
 - `dataset-generation/`: scripts used to generate the paper's benchmark CSVs.
 - `analysis/`: post-hoc analysis of saved evaluation output — heuristic-agreement
   checks and the prize-magnitude sweep. No GPU needed.
@@ -137,11 +137,10 @@ separately, because they are large binaries rather than code:
 
 **<https://huggingface.co/MIT-SERC-risk-averse-AIs/risk-averse-ai-adapter-archive>**
 
-Only `paper_adapters/` in that archive backs a number in the paper. Steering has
-two paper-facing trees, `paper_adapters/steering_thinking_on/` (the main results)
-and `paper_adapters/steering/` (the thinking-off appendix comparison); the
-archive's root README carries a comparison table, and `steering/README.md` in
-this repository explains which mode backs which part of the paper.
+Only `paper_adapters/` in that archive backs a number in the paper, and for
+steering that means `paper_adapters/steering_thinking_on/` alone. See
+`steering/README.md` in this repository for what the thinking-off vectors are and
+why no paper number depends on them.
 
 ## Citation
 
