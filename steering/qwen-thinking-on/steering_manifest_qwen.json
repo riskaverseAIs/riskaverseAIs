@@ -1,0 +1,812 @@
+[
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-1.7b",
+  "base_model": "Qwen/Qwen3-1.7B",
+  "base_model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "layer": 5,
+  "alpha": 22,
+  "strength_r": 0.088983,
+  "mean_residual_norm_at_layer": 247.239,
+  "direction_seed": 1,
+  "seed_slot": "seed-1",
+  "hidden_size": 2048,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-1.7b/seed-1",
+  "sha256": "3f047c809de42ba6636b945f01dae9dbdadd3aa36ad5e7190b4d85906e85944c",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 5.546792030334473,
+   "source_weighting": "equal source after all cyclic rotations",
+   "training_csv_sha256": "3f90e9abdb90748368f751673834b05451e0bebbd3611b16d3bd880243231202",
+   "steering_info": "{'method': 'mean', 'position': 'mean_response', 'extraction_layer': 5, 'direction_seed': 1}"
+  },
+  "paper_rows_supported": [
+   "qwen3-1.7b / medium_stakes_validation",
+   "qwen3-1.7b / high_stakes_test",
+   "qwen3-1.7b / astronomical_stakes_deployment",
+   "qwen3-1.7b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "55.66 +/- 2.37",
+   "high": "49.92 +/- 1.31",
+   "astro": "55.19 +/- 1.43",
+   "steals": "56.24 +/- 1.13"
+  },
+  "results_baseline": {
+   "medium": "11.73%",
+   "high": "7.68%",
+   "astro": "11.10%",
+   "steals": "78.55%"
+  },
+  "pooled_parse_rate": {
+   "medium": "94.50%",
+   "high": "93.54%",
+   "astro": "91.52%",
+   "steals": "88.42%"
+  },
+  "source_run": "steering-continuation-20260910/qwen1_7b",
+  "residual_norm_provenance": "measured 2026-09-16 with measure_norms.py, same probe prompt and repo as the llama and gemma measurements",
+  "generated": "2026-09-16"
+ },
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-1.7b",
+  "base_model": "Qwen/Qwen3-1.7B",
+  "base_model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "layer": 5,
+  "alpha": 22,
+  "strength_r": 0.088983,
+  "mean_residual_norm_at_layer": 247.239,
+  "direction_seed": 2,
+  "seed_slot": "seed-2",
+  "hidden_size": 2048,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-1.7b/seed-2",
+  "sha256": "95aee7a59f524559c768c5f0990362bc15de0bee6bc86ce595f59f7fc0a42ca6",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 5.534107685089111,
+   "source_weighting": "equal source after all cyclic rotations",
+   "training_csv_sha256": "99020bc2bc3e6479b92e5fd254339c1cbe7aae6d451d0c36637a98fad80ac811",
+   "steering_info": "{'method': 'mean', 'position': 'mean_response', 'extraction_layer': 5, 'direction_seed': 2}"
+  },
+  "paper_rows_supported": [
+   "qwen3-1.7b / medium_stakes_validation",
+   "qwen3-1.7b / high_stakes_test",
+   "qwen3-1.7b / astronomical_stakes_deployment",
+   "qwen3-1.7b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "55.66 +/- 2.37",
+   "high": "49.92 +/- 1.31",
+   "astro": "55.19 +/- 1.43",
+   "steals": "56.24 +/- 1.13"
+  },
+  "results_baseline": {
+   "medium": "11.73%",
+   "high": "7.68%",
+   "astro": "11.10%",
+   "steals": "78.55%"
+  },
+  "pooled_parse_rate": {
+   "medium": "94.50%",
+   "high": "93.54%",
+   "astro": "91.52%",
+   "steals": "88.42%"
+  },
+  "source_run": "steering-continuation-20260910/qwen1_7b",
+  "residual_norm_provenance": "measured 2026-09-16 with measure_norms.py, same probe prompt and repo as the llama and gemma measurements",
+  "generated": "2026-09-16"
+ },
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-1.7b",
+  "base_model": "Qwen/Qwen3-1.7B",
+  "base_model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "layer": 5,
+  "alpha": 22,
+  "strength_r": 0.088983,
+  "mean_residual_norm_at_layer": 247.239,
+  "direction_seed": 3,
+  "seed_slot": "seed-3",
+  "hidden_size": 2048,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-1.7b/seed-3",
+  "sha256": "a2cd414550f6da98108a1baa1714fe6a71fcf977becdc988e13f6d7a86cdaba3",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 5.617660999298096,
+   "source_weighting": "equal source after all cyclic rotations",
+   "training_csv_sha256": "7236c7b6a6a8521effe78185a3745464ff3b31c94bcaacb6911f06f9c6c18c7a",
+   "steering_info": "{'method': 'mean', 'position': 'mean_response', 'extraction_layer': 5, 'direction_seed': 3}"
+  },
+  "paper_rows_supported": [
+   "qwen3-1.7b / medium_stakes_validation",
+   "qwen3-1.7b / high_stakes_test",
+   "qwen3-1.7b / astronomical_stakes_deployment",
+   "qwen3-1.7b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "55.66 +/- 2.37",
+   "high": "49.92 +/- 1.31",
+   "astro": "55.19 +/- 1.43",
+   "steals": "56.24 +/- 1.13"
+  },
+  "results_baseline": {
+   "medium": "11.73%",
+   "high": "7.68%",
+   "astro": "11.10%",
+   "steals": "78.55%"
+  },
+  "pooled_parse_rate": {
+   "medium": "94.50%",
+   "high": "93.54%",
+   "astro": "91.52%",
+   "steals": "88.42%"
+  },
+  "source_run": "steering-continuation-20260910/qwen1_7b",
+  "residual_norm_provenance": "measured 2026-09-16 with measure_norms.py, same probe prompt and repo as the llama and gemma measurements",
+  "generated": "2026-09-16"
+ },
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-1.7b",
+  "base_model": "Qwen/Qwen3-1.7B",
+  "base_model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "layer": 5,
+  "alpha": 22,
+  "strength_r": 0.088983,
+  "mean_residual_norm_at_layer": 247.239,
+  "direction_seed": 4,
+  "seed_slot": "seed-4",
+  "hidden_size": 2048,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-1.7b/seed-4",
+  "sha256": "297cfc220ab9d29fe4b32e1be89125ddbb4518dd12a221ac97dbcc70d7764fbf",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 5.670926094055176,
+   "source_weighting": "equal source after all cyclic rotations",
+   "training_csv_sha256": "0b5fb8a062908d322fa85875739e14e818509f3a7a38974759e44aabc9edbc3b",
+   "steering_info": "{'method': 'mean', 'position': 'mean_response', 'extraction_layer': 5, 'direction_seed': 4}"
+  },
+  "paper_rows_supported": [
+   "qwen3-1.7b / medium_stakes_validation",
+   "qwen3-1.7b / high_stakes_test",
+   "qwen3-1.7b / astronomical_stakes_deployment",
+   "qwen3-1.7b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "55.66 +/- 2.37",
+   "high": "49.92 +/- 1.31",
+   "astro": "55.19 +/- 1.43",
+   "steals": "56.24 +/- 1.13"
+  },
+  "results_baseline": {
+   "medium": "11.73%",
+   "high": "7.68%",
+   "astro": "11.10%",
+   "steals": "78.55%"
+  },
+  "pooled_parse_rate": {
+   "medium": "94.50%",
+   "high": "93.54%",
+   "astro": "91.52%",
+   "steals": "88.42%"
+  },
+  "source_run": "steering-continuation-20260910/qwen1_7b",
+  "residual_norm_provenance": "measured 2026-09-16 with measure_norms.py, same probe prompt and repo as the llama and gemma measurements",
+  "generated": "2026-09-16"
+ },
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-1.7b",
+  "base_model": "Qwen/Qwen3-1.7B",
+  "base_model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "layer": 5,
+  "alpha": 22,
+  "strength_r": 0.088983,
+  "mean_residual_norm_at_layer": 247.239,
+  "direction_seed": 5,
+  "seed_slot": "seed-5",
+  "hidden_size": 2048,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-1.7b/seed-5",
+  "sha256": "77297b7ab89a5212551f65ee729fa2f5d97daf94e36824decfb14c56822e5f30",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 5.611776828765869,
+   "source_weighting": "equal source after all cyclic rotations",
+   "training_csv_sha256": "0f92151e87ca8a2f9fd7c88b99563308e4f61fd26afe07699bef4840a86ecde1",
+   "steering_info": "{'method': 'mean', 'position': 'mean_response', 'extraction_layer': 5, 'direction_seed': 5}"
+  },
+  "paper_rows_supported": [
+   "qwen3-1.7b / medium_stakes_validation",
+   "qwen3-1.7b / high_stakes_test",
+   "qwen3-1.7b / astronomical_stakes_deployment",
+   "qwen3-1.7b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "55.66 +/- 2.37",
+   "high": "49.92 +/- 1.31",
+   "astro": "55.19 +/- 1.43",
+   "steals": "56.24 +/- 1.13"
+  },
+  "results_baseline": {
+   "medium": "11.73%",
+   "high": "7.68%",
+   "astro": "11.10%",
+   "steals": "78.55%"
+  },
+  "pooled_parse_rate": {
+   "medium": "94.50%",
+   "high": "93.54%",
+   "astro": "91.52%",
+   "steals": "88.42%"
+  },
+  "source_run": "steering-continuation-20260910/qwen1_7b",
+  "residual_norm_provenance": "measured 2026-09-16 with measure_norms.py, same probe prompt and repo as the llama and gemma measurements",
+  "generated": "2026-09-16"
+ },
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-8b",
+  "base_model": "Qwen/Qwen3-8B",
+  "base_model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "layer": 12,
+  "alpha": 32,
+  "strength_r": 0.709156,
+  "mean_residual_norm_at_layer": 45.124073067556246,
+  "direction_seed": 1,
+  "seed_slot": "seed-1",
+  "hidden_size": 4096,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-8b/seed-1",
+  "sha256": "cd44a45e40135cc2c4fe15ed37ab98d2287e9c5abe59d6b7536a46f8b9688dd1",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 7.104583740234375,
+   "source_weighting": "equal source weight after averaging all cyclic rotations within source",
+   "training_csv_sha256": "3f90e9abdb90748368f751673834b05451e0bebbd3611b16d3bd880243231202",
+   "steering_info": "{'mode': 'caa_mean_counterbalanced_source_equal', 'method': 'mean', 'position': 'mean_response', 'extraction_layer': 12, 'direction_seed': 1, 'construction_csv_sha256': '3f90e9abdb90748368f751673834b05451e0bebbd3611b16d3bd880243231202', 'construction': 'mean chosen_full-rejected_full over rotations within source, then mean over sources'}"
+  },
+  "paper_rows_supported": [
+   "qwen3-8b / medium_stakes_validation",
+   "qwen3-8b / high_stakes_test",
+   "qwen3-8b / astronomical_stakes_deployment",
+   "qwen3-8b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "57.89 +/- 2.47",
+   "high": "51.26 +/- 2.68",
+   "astro": "77.79 +/- 1.77",
+   "steals": "49.91 +/- 1.05"
+  },
+  "results_baseline": {
+   "medium": "10.61%",
+   "high": "5.14%",
+   "astro": "2.61%",
+   "steals": "80.77%"
+  },
+  "pooled_parse_rate": {
+   "medium": "96.40%",
+   "high": "96.64%",
+   "astro": "95.86%",
+   "steals": "95.92%"
+  },
+  "source_run": "steering-paper-run-20260907-batched",
+  "residual_norm_provenance": "recorded at build time",
+  "generated": "2026-09-16"
+ },
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-8b",
+  "base_model": "Qwen/Qwen3-8B",
+  "base_model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "layer": 12,
+  "alpha": 32,
+  "strength_r": 0.710123,
+  "mean_residual_norm_at_layer": 45.0625875365795,
+  "direction_seed": 2,
+  "seed_slot": "seed-2",
+  "hidden_size": 4096,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-8b/seed-2",
+  "sha256": "3053e11375b81bd5322f90fca5b0a9716ba036ddcf4da4cb09d9a734889e19c4",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 7.037977695465088,
+   "source_weighting": "equal source weight after averaging all cyclic rotations within source",
+   "training_csv_sha256": "99020bc2bc3e6479b92e5fd254339c1cbe7aae6d451d0c36637a98fad80ac811",
+   "steering_info": "{'mode': 'caa_mean_counterbalanced_source_equal', 'method': 'mean', 'position': 'mean_response', 'extraction_layer': 12, 'direction_seed': 2, 'construction_csv_sha256': '99020bc2bc3e6479b92e5fd254339c1cbe7aae6d451d0c36637a98fad80ac811', 'construction': 'mean chosen_full-rejected_full over rotations within source, then mean over sources'}"
+  },
+  "paper_rows_supported": [
+   "qwen3-8b / medium_stakes_validation",
+   "qwen3-8b / high_stakes_test",
+   "qwen3-8b / astronomical_stakes_deployment",
+   "qwen3-8b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "57.89 +/- 2.47",
+   "high": "51.26 +/- 2.68",
+   "astro": "77.79 +/- 1.77",
+   "steals": "49.91 +/- 1.05"
+  },
+  "results_baseline": {
+   "medium": "10.61%",
+   "high": "5.14%",
+   "astro": "2.61%",
+   "steals": "80.77%"
+  },
+  "pooled_parse_rate": {
+   "medium": "96.40%",
+   "high": "96.64%",
+   "astro": "95.86%",
+   "steals": "95.92%"
+  },
+  "source_run": "steering-paper-run-20260907-batched",
+  "residual_norm_provenance": "recorded at build time",
+  "generated": "2026-09-16"
+ },
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-8b",
+  "base_model": "Qwen/Qwen3-8B",
+  "base_model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "layer": 12,
+  "alpha": 32,
+  "strength_r": 0.709615,
+  "mean_residual_norm_at_layer": 45.0949031953308,
+  "direction_seed": 3,
+  "seed_slot": "seed-3",
+  "hidden_size": 4096,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-8b/seed-3",
+  "sha256": "23e8e410638a3bb3121886e83eff57caf47906351260fef39d932531d753e650",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 7.121077060699463,
+   "source_weighting": "equal source weight after averaging all cyclic rotations within source",
+   "training_csv_sha256": "7236c7b6a6a8521effe78185a3745464ff3b31c94bcaacb6911f06f9c6c18c7a",
+   "steering_info": "{'mode': 'caa_mean_counterbalanced_source_equal', 'method': 'mean', 'position': 'mean_response', 'extraction_layer': 12, 'direction_seed': 3, 'construction_csv_sha256': '7236c7b6a6a8521effe78185a3745464ff3b31c94bcaacb6911f06f9c6c18c7a', 'construction': 'mean chosen_full-rejected_full over rotations within source, then mean over sources'}"
+  },
+  "paper_rows_supported": [
+   "qwen3-8b / medium_stakes_validation",
+   "qwen3-8b / high_stakes_test",
+   "qwen3-8b / astronomical_stakes_deployment",
+   "qwen3-8b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "57.89 +/- 2.47",
+   "high": "51.26 +/- 2.68",
+   "astro": "77.79 +/- 1.77",
+   "steals": "49.91 +/- 1.05"
+  },
+  "results_baseline": {
+   "medium": "10.61%",
+   "high": "5.14%",
+   "astro": "2.61%",
+   "steals": "80.77%"
+  },
+  "pooled_parse_rate": {
+   "medium": "96.40%",
+   "high": "96.64%",
+   "astro": "95.86%",
+   "steals": "95.92%"
+  },
+  "source_run": "steering-paper-run-20260907-batched",
+  "residual_norm_provenance": "recorded at build time",
+  "generated": "2026-09-16"
+ },
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-8b",
+  "base_model": "Qwen/Qwen3-8B",
+  "base_model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "layer": 12,
+  "alpha": 32,
+  "strength_r": 0.710569,
+  "mean_residual_norm_at_layer": 45.034337487293875,
+  "direction_seed": 4,
+  "seed_slot": "seed-4",
+  "hidden_size": 4096,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-8b/seed-4",
+  "sha256": "daf562ec99aff771026847f5eb17514465d327fc9b74243be5c853238c3b0f71",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 7.158903121948242,
+   "source_weighting": "equal source weight after averaging all cyclic rotations within source",
+   "training_csv_sha256": "0b5fb8a062908d322fa85875739e14e818509f3a7a38974759e44aabc9edbc3b",
+   "steering_info": "{'mode': 'caa_mean_counterbalanced_source_equal', 'method': 'mean', 'position': 'mean_response', 'extraction_layer': 12, 'direction_seed': 4, 'construction_csv_sha256': '0b5fb8a062908d322fa85875739e14e818509f3a7a38974759e44aabc9edbc3b', 'construction': 'mean chosen_full-rejected_full over rotations within source, then mean over sources'}"
+  },
+  "paper_rows_supported": [
+   "qwen3-8b / medium_stakes_validation",
+   "qwen3-8b / high_stakes_test",
+   "qwen3-8b / astronomical_stakes_deployment",
+   "qwen3-8b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "57.89 +/- 2.47",
+   "high": "51.26 +/- 2.68",
+   "astro": "77.79 +/- 1.77",
+   "steals": "49.91 +/- 1.05"
+  },
+  "results_baseline": {
+   "medium": "10.61%",
+   "high": "5.14%",
+   "astro": "2.61%",
+   "steals": "80.77%"
+  },
+  "pooled_parse_rate": {
+   "medium": "96.40%",
+   "high": "96.64%",
+   "astro": "95.86%",
+   "steals": "95.92%"
+  },
+  "source_run": "steering-paper-run-20260907-batched",
+  "residual_norm_provenance": "recorded at build time",
+  "generated": "2026-09-16"
+ },
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-8b",
+  "base_model": "Qwen/Qwen3-8B",
+  "base_model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "layer": 12,
+  "alpha": 32,
+  "strength_r": 0.70958,
+  "mean_residual_norm_at_layer": 45.09712645548572,
+  "direction_seed": 5,
+  "seed_slot": "seed-5",
+  "hidden_size": 4096,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-8b/seed-5",
+  "sha256": "bacda4394bc1871f681403d236859dbfa0d0df2a820d1e55ba2d23d6052a0750",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 7.162436008453369,
+   "source_weighting": "equal source weight after averaging all cyclic rotations within source",
+   "training_csv_sha256": "0f92151e87ca8a2f9fd7c88b99563308e4f61fd26afe07699bef4840a86ecde1",
+   "steering_info": "{'mode': 'caa_mean_counterbalanced_source_equal', 'method': 'mean', 'position': 'mean_response', 'extraction_layer': 12, 'direction_seed': 5, 'construction_csv_sha256': '0f92151e87ca8a2f9fd7c88b99563308e4f61fd26afe07699bef4840a86ecde1', 'construction': 'mean chosen_full-rejected_full over rotations within source, then mean over sources'}"
+  },
+  "paper_rows_supported": [
+   "qwen3-8b / medium_stakes_validation",
+   "qwen3-8b / high_stakes_test",
+   "qwen3-8b / astronomical_stakes_deployment",
+   "qwen3-8b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "57.89 +/- 2.47",
+   "high": "51.26 +/- 2.68",
+   "astro": "77.79 +/- 1.77",
+   "steals": "49.91 +/- 1.05"
+  },
+  "results_baseline": {
+   "medium": "10.61%",
+   "high": "5.14%",
+   "astro": "2.61%",
+   "steals": "80.77%"
+  },
+  "pooled_parse_rate": {
+   "medium": "96.40%",
+   "high": "96.64%",
+   "astro": "95.86%",
+   "steals": "95.92%"
+  },
+  "source_run": "steering-paper-run-20260907-batched",
+  "residual_norm_provenance": "recorded at build time",
+  "generated": "2026-09-16"
+ },
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-14b",
+  "base_model": "Qwen/Qwen3-14B",
+  "base_model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "layer": 12,
+  "alpha": 48,
+  "strength_r": 0.195106,
+  "mean_residual_norm_at_layer": 246.02,
+  "direction_seed": 1,
+  "seed_slot": "seed-1",
+  "hidden_size": 5120,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-14b/seed-1",
+  "sha256": "bf9c78a90a512012a9889468fae75e86ce01d6ce93e397f54b6c3023550ea8e8",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 8.267939567565918,
+   "source_weighting": "equal source after all cyclic rotations",
+   "training_csv_sha256": "3f90e9abdb90748368f751673834b05451e0bebbd3611b16d3bd880243231202",
+   "steering_info": "{'method': 'mean', 'position': 'mean_response', 'extraction_layer': 12, 'direction_seed': 1}"
+  },
+  "paper_rows_supported": [
+   "qwen3-14b / medium_stakes_validation",
+   "qwen3-14b / high_stakes_test",
+   "qwen3-14b / astronomical_stakes_deployment",
+   "qwen3-14b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "64.13 +/- 3.49",
+   "high": "52.27 +/- 0.84",
+   "astro": "76.56 +/- 1.67",
+   "steals": "54.70 +/- 0.91"
+  },
+  "results_baseline": {
+   "medium": "11.50%",
+   "high": "4.31%",
+   "astro": "4.50%",
+   "steals": "82.30%"
+  },
+  "pooled_parse_rate": {
+   "medium": "99.00%",
+   "high": "99.00%",
+   "astro": "99.40%",
+   "steals": "98.28%"
+  },
+  "source_run": "steering-three-model-eval-20260909/qwen14b",
+  "residual_norm_provenance": "measured 2026-09-16 with measure_norms.py, same probe prompt and repo as the llama and gemma measurements",
+  "generated": "2026-09-16"
+ },
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-14b",
+  "base_model": "Qwen/Qwen3-14B",
+  "base_model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "layer": 12,
+  "alpha": 48,
+  "strength_r": 0.195106,
+  "mean_residual_norm_at_layer": 246.02,
+  "direction_seed": 2,
+  "seed_slot": "seed-2",
+  "hidden_size": 5120,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-14b/seed-2",
+  "sha256": "ce69780cedf72585b2b7eb5ae6f4cd3273674e34536eafe5c845a63dde2c9f55",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 8.222726821899414,
+   "source_weighting": "equal source after all cyclic rotations",
+   "training_csv_sha256": "99020bc2bc3e6479b92e5fd254339c1cbe7aae6d451d0c36637a98fad80ac811",
+   "steering_info": "{'method': 'mean', 'position': 'mean_response', 'extraction_layer': 12, 'direction_seed': 2}"
+  },
+  "paper_rows_supported": [
+   "qwen3-14b / medium_stakes_validation",
+   "qwen3-14b / high_stakes_test",
+   "qwen3-14b / astronomical_stakes_deployment",
+   "qwen3-14b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "64.13 +/- 3.49",
+   "high": "52.27 +/- 0.84",
+   "astro": "76.56 +/- 1.67",
+   "steals": "54.70 +/- 0.91"
+  },
+  "results_baseline": {
+   "medium": "11.50%",
+   "high": "4.31%",
+   "astro": "4.50%",
+   "steals": "82.30%"
+  },
+  "pooled_parse_rate": {
+   "medium": "99.00%",
+   "high": "99.00%",
+   "astro": "99.40%",
+   "steals": "98.28%"
+  },
+  "source_run": "steering-three-model-eval-20260909/qwen14b",
+  "residual_norm_provenance": "measured 2026-09-16 with measure_norms.py, same probe prompt and repo as the llama and gemma measurements",
+  "generated": "2026-09-16"
+ },
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-14b",
+  "base_model": "Qwen/Qwen3-14B",
+  "base_model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "layer": 12,
+  "alpha": 48,
+  "strength_r": 0.195106,
+  "mean_residual_norm_at_layer": 246.02,
+  "direction_seed": 3,
+  "seed_slot": "seed-3",
+  "hidden_size": 5120,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-14b/seed-3",
+  "sha256": "264767dcbbab85d9aa72d9f610b5a1c5aaa2438d9c996e4c4b755b9148733e6f",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 8.302875518798828,
+   "source_weighting": "equal source after all cyclic rotations",
+   "training_csv_sha256": "7236c7b6a6a8521effe78185a3745464ff3b31c94bcaacb6911f06f9c6c18c7a",
+   "steering_info": "{'method': 'mean', 'position': 'mean_response', 'extraction_layer': 12, 'direction_seed': 3}"
+  },
+  "paper_rows_supported": [
+   "qwen3-14b / medium_stakes_validation",
+   "qwen3-14b / high_stakes_test",
+   "qwen3-14b / astronomical_stakes_deployment",
+   "qwen3-14b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "64.13 +/- 3.49",
+   "high": "52.27 +/- 0.84",
+   "astro": "76.56 +/- 1.67",
+   "steals": "54.70 +/- 0.91"
+  },
+  "results_baseline": {
+   "medium": "11.50%",
+   "high": "4.31%",
+   "astro": "4.50%",
+   "steals": "82.30%"
+  },
+  "pooled_parse_rate": {
+   "medium": "99.00%",
+   "high": "99.00%",
+   "astro": "99.40%",
+   "steals": "98.28%"
+  },
+  "source_run": "steering-three-model-eval-20260909/qwen14b",
+  "residual_norm_provenance": "measured 2026-09-16 with measure_norms.py, same probe prompt and repo as the llama and gemma measurements",
+  "generated": "2026-09-16"
+ },
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-14b",
+  "base_model": "Qwen/Qwen3-14B",
+  "base_model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "layer": 12,
+  "alpha": 48,
+  "strength_r": 0.195106,
+  "mean_residual_norm_at_layer": 246.02,
+  "direction_seed": 4,
+  "seed_slot": "seed-4",
+  "hidden_size": 5120,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-14b/seed-4",
+  "sha256": "97d796e97ebaaa18d12cc13c94188cd327c28d2cf69b54c7734ef90bf712b5bb",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 8.364442825317383,
+   "source_weighting": "equal source after all cyclic rotations",
+   "training_csv_sha256": "0b5fb8a062908d322fa85875739e14e818509f3a7a38974759e44aabc9edbc3b",
+   "steering_info": "{'method': 'mean', 'position': 'mean_response', 'extraction_layer': 12, 'direction_seed': 4}"
+  },
+  "paper_rows_supported": [
+   "qwen3-14b / medium_stakes_validation",
+   "qwen3-14b / high_stakes_test",
+   "qwen3-14b / astronomical_stakes_deployment",
+   "qwen3-14b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "64.13 +/- 3.49",
+   "high": "52.27 +/- 0.84",
+   "astro": "76.56 +/- 1.67",
+   "steals": "54.70 +/- 0.91"
+  },
+  "results_baseline": {
+   "medium": "11.50%",
+   "high": "4.31%",
+   "astro": "4.50%",
+   "steals": "82.30%"
+  },
+  "pooled_parse_rate": {
+   "medium": "99.00%",
+   "high": "99.00%",
+   "astro": "99.40%",
+   "steals": "98.28%"
+  },
+  "source_run": "steering-three-model-eval-20260909/qwen14b",
+  "residual_norm_provenance": "measured 2026-09-16 with measure_norms.py, same probe prompt and repo as the llama and gemma measurements",
+  "generated": "2026-09-16"
+ },
+ {
+  "method": "CAA-mean (contrastive activation addition)",
+  "model": "qwen3-14b",
+  "base_model": "Qwen/Qwen3-14B",
+  "base_model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "layer": 12,
+  "alpha": 48,
+  "strength_r": 0.195106,
+  "mean_residual_norm_at_layer": 246.02,
+  "direction_seed": 5,
+  "seed_slot": "seed-5",
+  "hidden_size": 5120,
+  "vector_norm": 1.0,
+  "evaluation_mode": "thinking-on",
+  "apply_mode": "all_positions",
+  "system_prompt": "non-empty, 1015 chars (differs from llama-3.1-8b and gemma-3-12b in this tree, which use an empty system prompt)",
+  "path": "paper_adapters/steering_thinking_on/qwen3-14b/seed-5",
+  "sha256": "4608fa43dd368cc34466e73097972347eddd78d9ad5f43c59b70182b7d30ea09",
+  "payload_metadata": {
+   "position": "mean_response",
+   "normalized": true,
+   "raw_aggregate_norm": 8.343116760253906,
+   "source_weighting": "equal source after all cyclic rotations",
+   "training_csv_sha256": "0f92151e87ca8a2f9fd7c88b99563308e4f61fd26afe07699bef4840a86ecde1",
+   "steering_info": "{'method': 'mean', 'position': 'mean_response', 'extraction_layer': 12, 'direction_seed': 5}"
+  },
+  "paper_rows_supported": [
+   "qwen3-14b / medium_stakes_validation",
+   "qwen3-14b / high_stakes_test",
+   "qwen3-14b / astronomical_stakes_deployment",
+   "qwen3-14b / steals_test"
+  ],
+  "results_cooperate_rate_mean_sd": {
+   "medium": "64.13 +/- 3.49",
+   "high": "52.27 +/- 0.84",
+   "astro": "76.56 +/- 1.67",
+   "steals": "54.70 +/- 0.91"
+  },
+  "results_baseline": {
+   "medium": "11.50%",
+   "high": "4.31%",
+   "astro": "4.50%",
+   "steals": "82.30%"
+  },
+  "pooled_parse_rate": {
+   "medium": "99.00%",
+   "high": "99.00%",
+   "astro": "99.40%",
+   "steals": "98.28%"
+  },
+  "source_run": "steering-three-model-eval-20260909/qwen14b",
+  "residual_norm_provenance": "measured 2026-09-16 with measure_norms.py, same probe prompt and repo as the llama and gemma measurements",
+  "generated": "2026-09-16"
+ }
+]

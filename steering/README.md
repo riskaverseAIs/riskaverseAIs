@@ -14,10 +14,10 @@ never sit beside a row from the other.
 |---|---|---|
 | chain-of-thought at inference | enabled | disabled |
 | role in the paper | **main results** | appendix comparison |
-| system prompt at construction | empty | the gamble system prompt |
+| system prompt at construction | empty for Llama and Gemma, the gamble system prompt for the three Qwen models | the gamble system prompt |
 | construction seeds | 1-5 | 12345, 23456, 34567, 45678, 56789 |
-| where | [`crossfamily-correction/`](crossfamily-correction/) | this file, below |
-| models | Llama-3.1-8B, Gemma-3-12B | all five |
+| where | [`crossfamily-correction/`](crossfamily-correction/) for Llama and Gemma, [`qwen-thinking-on/`](qwen-thinking-on/) for the Qwen models | this file, below |
+| models | all five | all five |
 
 The paper's main steering table uses **thinking-on**, so that steering is measured the same
 way as SFT, DPO, tie training and RMFT. The thinking-off configuration is retained because
@@ -58,12 +58,36 @@ five-vector paper runs, every individual answer, and the code:
 
 **[`crossfamily-correction/`](crossfamily-correction/)**
 
-| model | layer (0-based) | r | alpha |
-|---|---:|---:|---:|
-| Llama-3.1-8B-Instruct | 8 | 0.15 | 2.446740245819092 |
-| Gemma-3-12B-IT | 16 | 0.07 | 2421.8088671875 |
+| model | layer (0-based) | r | alpha | mean residual norm at layer |
+|---|---:|---:|---:|---:|
+| Gemma-3-12B-IT | 16 | 0.070 | 2421.8088671875 | ~34,600 |
+| Qwen3-1.7B | 5 | 0.089 | 22 | 247.24 |
+| Llama-3.1-8B-Instruct | 8 | 0.150 | 2.446740245819092 | 16.31 |
+| Qwen3-14B | 12 | 0.195 | 48 | 246.02 |
+| Qwen3-8B | 12 | 0.710 | 32 | 45.08 |
 
 Evaluated thinking-on with an empty system prompt, direction added at all token positions.
+
+The three Qwen searches were run in raw `alpha`; their layer norms were measured
+afterwards, on 16 September 2026, with the same probe prompt as the Llama and Gemma
+measurements, so all five `r` values are on one scale. Note that Qwen3-8B, the paper's
+headline model, was steered about 3.6x harder than the next strongest model and about
+10x harder than Gemma. It is also the model with the largest measured capability cost,
+so the cost may track the strength rather than steering as such.
+
+### The search
+
+All five models used the same procedure: coordinate descent over (layer, strength),
+starting at strength 32 and the layer nearest one third of the model's depth, with a
+strength step of 16 and a layer step of `round(depth/6)`. From each point, move to a
+better eligible neighbour until the centre dominates its neighbours, alternating between
+the two coordinates, then halve both steps — down to 2 in strength and 1 in layer.
+The domain is strength 0-128 and layer 0 to depth-1. A candidate is promoted if it
+maximises the Cooperate rate among parsed answers subject to a pooled parse floor of 95%.
+For Llama and Gemma the strength coordinate was searched in ratio units, over
+`r` in {0.02, 0.03, 0.045, 0.07, 0.10, 0.15, 0.22, 0.32, 0.45, 0.63, 0.85, 1.15, 1.50}
+plus `r = 0`, with layer scans over {8, 10, 12, 14, 16} for Llama and {8, 12, 16, 20, 24}
+for Gemma.
 
 ---
 
@@ -132,6 +156,9 @@ runners in [`crossfamily-correction/code/`](crossfamily-correction/code/).
 
 ## Direction vectors
 
-The vectors themselves are not in this repository. They live in the private adapter archive
+The vectors themselves are not in this repository. They live in the companion model
+archive, <https://huggingface.co/MIT-SERC-risk-averse-AIs/risk-averse-ai-adapter-archive>,
 under `paper_adapters/steering/` (thinking-off) and `paper_adapters/steering_thinking_on/`
-(thinking-on).
+(thinking-on). Each tree carries its own `README.md` and `steering_manifest.json`, and every
+manifest entry records `strength_r` and `mean_residual_norm_at_layer` beside `alpha`, so
+strength is comparable across models and layers without recomputing anything.

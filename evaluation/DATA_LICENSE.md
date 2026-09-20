@@ -15,6 +15,11 @@ transfer-benchmark CSVs.
 
 ## Attribution
 
-During anonymous review, attribute reuse to the anonymous repository and preserve
-the CC BY 4.0 notice. After de-anonymization, replace that temporary attribution
-with the final paper or project citation.
+Attribute reuse to the paper:
+
+> Kristina Zhang, Junior Chinomso Okoroafor, Benjamin Maltbie, Andrew Lin,
+> Abhitej Bokka, and Elliott Thornley. Out-of-Distribution Generalization of
+> Risk Aversion in Language Models. 2026.
+> https://github.com/riskaverseAIs/riskaverseAIs
+
+and preserve the CC BY 4.0 notice.

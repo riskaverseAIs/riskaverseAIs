@@ -1,0 +1,61 @@
+% Magnitude-sweep figure. Drop-in once analysis/aggregate_results.py has written
+% magnitude_sweep.dat. This will be the paper's first figure with error bars.
+%
+% To use: copy magnitude_sweep.dat next to main.tex, then \input this file, or paste
+% the figure body into Appendix "Two Planned Controls".
+%
+% The .dat has four whitespace-separated columns:
+%   condition  log10_takeover  cooperate_mean  cooperate_sd
+% pgfplots filters one condition per \addplot via `discard if not`.
+%
+% Reading the plot:
+%   rising with magnitude  -> "huge number is a trap" heuristic
+%   flat                   -> consistent with the bounded CARA target
+%   falling                -> expected-value reasoning (the untrained baseline)
+% The low end is the diagnostic: $10^3 and $10^4 are not alarming numbers.
+
+\pgfplotsset{
+  discard if not/.style 2 args={
+    x filter/.code={
+      \edef\tempa{\thisrow{#1}}\edef\tempb{#2}%
+      \ifx\tempa\tempb\else\def\pgfmathresult{inf}\fi
+    }
+  }
+}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=\linewidth,
+    height=6cm,
+    xlabel={Takeover payoff, $\log_{10}$ dollars},
+    ylabel={Cooperate \%},
+    ymin=0, ymax=100,
+    xmin=2, xmax=101,
+    xtick={3,4,5,6,8,11,16,25,50,100},
+    xticklabel style={font=\tiny, rotate=45, anchor=north east},
+    grid=major,
+    grid style={dashed, gray!30},
+    legend pos=outer north east,
+    legend style={font=\small, draw=none},
+    error bars/y dir=both,
+    error bars/y explicit,
+]
+% One \addplot per condition. Add or remove rows to match what was actually run.
+\foreach \cond/\lbl in {baseline/Baseline, sft/SFT, tie/Tie training, dpo/DPO, steering/Steering}{
+  \edef\temp{\noexpand\addplot+[mark=*, discard if not={condition}{\cond}]
+    table[x=log10_takeover, y=cooperate_mean, y error=cooperate_sd, col sep=space]
+    {magnitude_sweep.dat};
+    \noexpand\addlegendentry{\lbl}}
+  \temp
+}
+\end{axis}
+\end{tikzpicture}
+\caption{Cooperate percentage against the magnitude of the Rebel takeover payoff, on 732
+matched families of situations that are identical except for that payoff. Mean $\pm$ 1
+standard deviation over five seeds. A rising curve would indicate a heuristic triggered by
+large numbers, a flat curve is what the bounded target utility predicts, and a falling
+curve is expected-value reasoning.}
+\label{fig:magnitude-sweep}
+\end{figure}
