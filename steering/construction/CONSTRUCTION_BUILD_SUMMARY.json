@@ -1,0 +1,130 @@
+{
+ "source": "evaluation/data/2026_03_22_low_stakes_training_set_600_situations_with_CoTs_lin_only.csv",
+ "source_sha256": "3b26979d0d1c98f48eb76482a2ca53a55c749e63f04a42ddb239061b22e047e1",
+ "seeds": {
+  "1": {
+   "construction_seed": 1,
+   "source_situations": 200,
+   "generated_contrasts": 587,
+   "selection_quotas_by_num_options": {
+    "3": 67,
+    "4": 39,
+    "2": 80,
+    "5": 14
+   },
+   "output_sha256": "3f90e9abdb90748368f751673834b05451e0bebbd3611b16d3bd880243231202",
+   "balance_audit": "PASS: each semantic option and both targets occupy every display position once within each source",
+   "prompt_attachment_audit": "PASS: prompt option bodies are moved without modification",
+   "response_roundtrip_audit": "PASS: inverse relabelling recovers each original response byte-for-byte",
+   "final_answer_audit": "PASS: all final JSON answers equal the remapped expected label",
+   "transform_counts": {
+    "chosen_option_ref": 4058,
+    "chosen_json_answer": 587,
+    "rejected_option_ref": 4681,
+    "rejected_json_answer": 587,
+    "chosen_eu_ref": 1414,
+    "chosen_e_bracket_u_ref": 48,
+    "chosen_decision_bare_ref": 5
+   }
+  },
+  "2": {
+   "construction_seed": 2,
+   "source_situations": 200,
+   "generated_contrasts": 587,
+   "selection_quotas_by_num_options": {
+    "3": 67,
+    "4": 39,
+    "2": 80,
+    "5": 14
+   },
+   "output_sha256": "99020bc2bc3e6479b92e5fd254339c1cbe7aae6d451d0c36637a98fad80ac811",
+   "balance_audit": "PASS: each semantic option and both targets occupy every display position once within each source",
+   "prompt_attachment_audit": "PASS: prompt option bodies are moved without modification",
+   "response_roundtrip_audit": "PASS: inverse relabelling recovers each original response byte-for-byte",
+   "final_answer_audit": "PASS: all final JSON answers equal the remapped expected label",
+   "transform_counts": {
+    "chosen_option_ref": 4134,
+    "chosen_json_answer": 587,
+    "rejected_option_ref": 4513,
+    "rejected_json_answer": 587,
+    "chosen_eu_ref": 1511,
+    "chosen_e_bracket_u_ref": 43,
+    "chosen_decision_bare_ref": 4
+   }
+  },
+  "3": {
+   "construction_seed": 3,
+   "source_situations": 200,
+   "generated_contrasts": 587,
+   "selection_quotas_by_num_options": {
+    "3": 67,
+    "4": 39,
+    "2": 80,
+    "5": 14
+   },
+   "output_sha256": "7236c7b6a6a8521effe78185a3745464ff3b31c94bcaacb6911f06f9c6c18c7a",
+   "balance_audit": "PASS: each semantic option and both targets occupy every display position once within each source",
+   "prompt_attachment_audit": "PASS: prompt option bodies are moved without modification",
+   "response_roundtrip_audit": "PASS: inverse relabelling recovers each original response byte-for-byte",
+   "final_answer_audit": "PASS: all final JSON answers equal the remapped expected label",
+   "transform_counts": {
+    "chosen_option_ref": 4019,
+    "chosen_json_answer": 587,
+    "rejected_option_ref": 4675,
+    "rejected_json_answer": 587,
+    "chosen_eu_ref": 1589,
+    "chosen_decision_bare_ref": 4,
+    "chosen_e_bracket_u_ref": 16
+   }
+  },
+  "4": {
+   "construction_seed": 4,
+   "source_situations": 200,
+   "generated_contrasts": 587,
+   "selection_quotas_by_num_options": {
+    "3": 67,
+    "4": 39,
+    "2": 80,
+    "5": 14
+   },
+   "output_sha256": "0b5fb8a062908d322fa85875739e14e818509f3a7a38974759e44aabc9edbc3b",
+   "balance_audit": "PASS: each semantic option and both targets occupy every display position once within each source",
+   "prompt_attachment_audit": "PASS: prompt option bodies are moved without modification",
+   "response_roundtrip_audit": "PASS: inverse relabelling recovers each original response byte-for-byte",
+   "final_answer_audit": "PASS: all final JSON answers equal the remapped expected label",
+   "transform_counts": {
+    "chosen_option_ref": 4099,
+    "chosen_json_answer": 587,
+    "rejected_option_ref": 4620,
+    "rejected_json_answer": 587,
+    "chosen_eu_ref": 1334,
+    "chosen_decision_bare_ref": 4,
+    "chosen_e_bracket_u_ref": 41
+   }
+  },
+  "5": {
+   "construction_seed": 5,
+   "source_situations": 200,
+   "generated_contrasts": 587,
+   "selection_quotas_by_num_options": {
+    "3": 67,
+    "4": 39,
+    "2": 80,
+    "5": 14
+   },
+   "output_sha256": "0f92151e87ca8a2f9fd7c88b99563308e4f61fd26afe07699bef4840a86ecde1",
+   "balance_audit": "PASS: each semantic option and both targets occupy every display position once within each source",
+   "prompt_attachment_audit": "PASS: prompt option bodies are moved without modification",
+   "response_roundtrip_audit": "PASS: inverse relabelling recovers each original response byte-for-byte",
+   "final_answer_audit": "PASS: all final JSON answers equal the remapped expected label",
+   "transform_counts": {
+    "chosen_option_ref": 4115,
+    "chosen_json_answer": 587,
+    "rejected_option_ref": 4665,
+    "rejected_json_answer": 587,
+    "chosen_eu_ref": 1722,
+    "chosen_decision_bare_ref": 2
+   }
+  }
+ }
+}

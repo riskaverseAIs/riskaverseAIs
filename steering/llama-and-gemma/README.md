@@ -1,41 +1,7 @@
-# Cross-family steering correction — Llama-3.1-8B and Gemma-3-12B
+# Steering — Llama-3.1-8B and Gemma-3-12B
 
-Corrected activation-steering results for the two non-Qwen model families, with the full
+Activation-steering results for the two non-Qwen model families, with the full
 hyperparameter search, the paper-facing runs, every individual answer, and the code.
-
-## The correction
-
-An earlier sweep reported activation steering as essentially null on Llama-3.1-8B
-(+2.92 pp cooperate rate on medium-stakes validation) and Gemma-3-12B (+0.75 pp), against
-large effects on three Qwen3 models.
-
-That was an artifact of how strength was parameterised. Steering adds `alpha * direction` to
-the residual stream, and the direction is unit-normalised — so `alpha` on its own says
-nothing about how large the intervention is relative to the activations it perturbs. Mean
-residual-stream norms differ enormously: 1.25 to 57 across Llama's layers, 1,105 to 161,797
-across Gemma's, with Gemma roughly 2,000x Llama at comparable depth. A grid over raw `alpha`
-therefore lands in a different effective region for every model and every layer.
-
-Re-expressing strength as
-
-    r = alpha / mean_residual_norm_at_layer
-
-and re-running the same search protocol finds large effects in both models. The published
-Gemma setting works out to r = 0.0027, about twenty-six times below the promoted value.
-
-| model | set | baseline | superseded | **corrected** |
-|---|---|---:|---:|---:|
-| Llama-3.1-8B | medium validation | 15.90% | 18.82% (+2.92) | **31.65% +/- 4.11 (+15.75)** |
-| Llama-3.1-8B | high stakes | 12.63% | 12.20% (-0.32) | **27.16% +/- 0.67 (+14.54)** |
-| Llama-3.1-8B | astronomical | 7.21% | 8.49% (+1.25) | **25.17% +/- 0.76 (+17.96)** |
-| Llama-3.1-8B | steals | 70.73% | 70.03% (-0.86) | **65.38% +/- 1.42 (-5.35)** |
-| Gemma-3-12B | medium validation | 17.35% | 18.10% (+0.75) | **62.52% +/- 0.64 (+45.18)** |
-| Gemma-3-12B | high stakes | 11.05% | 11.29% (+0.23) | **57.28% +/- 1.35 (+46.23)** |
-| Gemma-3-12B | astronomical | 7.51% | 6.26% (-1.24) | **42.29% +/- 1.83 (+34.79)** |
-| Gemma-3-12B | steals | 79.25% | 78.67% (-0.58) | **56.82% +/- 1.92 (-22.43)** |
-
-Cooperate rate among parsed answers. `+/-` is the sample standard deviation across five
-independently constructed direction vectors, not a confidence interval.
 
 ## Configurations
 
@@ -56,7 +22,7 @@ norm. Both values above use the empty system prompt these runs use. See
 ## Layout
 
 ```
-RESULTS.md            every figure, with superseded values alongside
+RESULTS.md            every figure, recomputed from the per-situation records
 METHODS.md            method, protocol, declared deviations, limitations
 
 results/

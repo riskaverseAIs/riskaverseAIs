@@ -7,7 +7,7 @@ generation. Nothing is trained.
 Directions and results are split by model family:
 
 - [`qwen/`](qwen/) — Qwen3-1.7B, Qwen3-8B, Qwen3-14B
-- [`crossfamily-correction/`](crossfamily-correction/) — Llama-3.1-8B-Instruct and
+- [`llama-and-gemma/`](llama-and-gemma/) — Llama-3.1-8B-Instruct and
   Gemma-3-12B-IT, with the full hyperparameter search, the five-vector paper runs,
   every individual answer, and the code
 
@@ -27,7 +27,7 @@ report
 Mean residual norm is prompt-dependent — about 17% variation on Gemma between two reasonable
 measuring prompts — so a ratio is only meaningful alongside the prompt used to measure it.
 The measured per-layer norms are under [`qwen/`](qwen/) and
-[`crossfamily-correction/results/`](crossfamily-correction/results/).
+[`llama-and-gemma/results/`](llama-and-gemma/results/).
 
 ## Locked configurations
 
@@ -67,25 +67,30 @@ Gemma.
 
 ## Build a direction
 
-The direction builder uses the 600-row lin-only low-stakes CoT file:
+Each direction is built from one of the five counterbalanced construction files in
+[`construction/`](construction/), which are the exact inputs the paper used. Pass
+`--source_column situation_id` so that each source situation is weighted equally after its
+option orderings are averaged together:
 
 ```bash
 python build_steering_direction.py \
   --base_model Qwen/Qwen3-8B \
-  --training_csv ../evaluation/data/2026_03_22_low_stakes_training_set_600_situations_with_CoTs_lin_only.csv \
+  --training_csv construction/construction_counterbalanced_seed_1.csv \
+  --source_column situation_id \
   --dataset_alias medium_stakes_validation \
   --position mean_response \
-  --num_situations 200 \
   --seed 1 \
   --output steering_qwen3_8b_seed1.pt
 ```
 
-One caveat on exact reproduction. The paper's directions average over every cyclic rotation
-of the option order within each source situation before averaging across sources, which
-requires a per-seed construction CSV carrying those rotations. The script that generates
-those CSVs is not in this repository, so `build_steering_direction.py` reproduces the method
-but will not give byte-identical directions. The directions themselves are in the model
-archive; see [Direction vectors](#direction-vectors).
+Repeat for seeds 1-5. For Llama and Gemma, add `--system_prompt_file` pointing at an empty
+file, since those directions were built with an empty system prompt.
+
+`--source_column` matters. Without it the builder shuffles the rows, truncates to
+`--num_situations`, and takes a flat mean over whatever survives — which both breaks the
+option-order grouping and over-weights sources that have more options. The construction files
+hold 587 rows from 200 sources, with between two and five orderings each, so a flat mean is
+not the same vector.
 
 ## Evaluate it
 
@@ -119,7 +124,7 @@ The same steering artifact can be passed to `../evaluation/evaluate_mmlu_redux.p
 | `vllm_steering.py` | the vLLM hook that adds the direction during generation |
 
 The paper runs additionally used the runners in
-[`crossfamily-correction/code/`](crossfamily-correction/code/).
+[`llama-and-gemma/code/`](llama-and-gemma/code/).
 
 ## Direction vectors
 

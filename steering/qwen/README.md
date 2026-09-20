@@ -2,7 +2,7 @@
 
 This directory backs the Qwen3-1.7B, Qwen3-8B, and Qwen3-14B steering rows. The
 Llama and Gemma rows are in
-[`../crossfamily-correction/`](../crossfamily-correction/).
+[`../llama-and-gemma/`](../llama-and-gemma/).
 
 ## Locked configurations
 
@@ -27,7 +27,7 @@ per-set cooperate rate, baseline, and pooled parse rate.
 `r` is `alpha` divided by the mean residual-stream norm at the steered layer, so
 it needs that norm to be measured with a stated probe prompt. All five models'
 norms were measured with
-[`../crossfamily-correction/code/measure_norms.py`](../crossfamily-correction/code/measure_norms.py)
+[`../llama-and-gemma/code/measure_norms.py`](../llama-and-gemma/code/measure_norms.py)
 and the same probe prompt, so the five `r` values sit on one scale. Full
 per-layer norms are in `RESIDUAL_NORMS_qwen1_7b.json` and
 `RESIDUAL_NORMS_qwen14b.json`.

@@ -105,6 +105,17 @@ def main() -> None:
     )
     parser.add_argument("--position", choices=["mean_response", "last"], default="mean_response")
     parser.add_argument("--num_situations", type=int, default=200)
+    parser.add_argument(
+        "--source_column",
+        default=None,
+        help=(
+            "Column naming the source situation, for a pre-built counterbalanced CSV "
+            "in which one source appears once per option ordering. Given it, rows are "
+            "used in file order with no shuffling or truncation, and each source gets "
+            "equal weight: average the contrasts within a source, then across sources. "
+            "That is how the paper's directions were built."
+        ),
+    )
     parser.add_argument("--seed", type=int, default=12345)
     parser.add_argument("--max_len", type=int, default=8192, help="Truncate sequences to this many tokens.")
     parser.add_argument(
@@ -138,8 +149,15 @@ def main() -> None:
     if "rejected_type" in df.columns:
         df = df[df["rejected_type"] == "lin"]
     df = df.dropna(subset=["prompt_text", "chosen_full", "rejected_full"]).reset_index(drop=True)
-    df = df.sample(frac=1.0, random_state=args.seed).reset_index(drop=True).head(args.num_situations)
-    print(f"Using {len(df)} situations from {csv_path}")
+    if args.source_column:
+        if args.source_column not in df.columns:
+            raise SystemExit(f"--source_column {args.source_column!r} is not in {csv_path}")
+        n_sources = df[args.source_column].nunique()
+        print(f"Using all {len(df)} rows from {csv_path}, "
+              f"{n_sources} sources, equally weighted")
+    else:
+        df = df.sample(frac=1.0, random_state=args.seed).reset_index(drop=True).head(args.num_situations)
+        print(f"Using {len(df)} situations from {csv_path}")
 
     print(f"Loading {args.base_model} ...")
     tokenizer = AutoTokenizer.from_pretrained(args.base_model, trust_remote_code=True)
@@ -176,6 +194,7 @@ def main() -> None:
 
     diffs = []
     chosen_norms = []
+    sources = []
     skipped = 0
     for i, row in df.iterrows():
         try:
@@ -193,6 +212,8 @@ def main() -> None:
             continue
         diffs.append(chosen - rejected)
         chosen_norms.append(chosen.norm().item())
+        if args.source_column:
+            sources.append(row[args.source_column])
         if (i + 1) % 25 == 0:
             print(f"  processed {i + 1}/{len(df)} (skipped {skipped})")
 
@@ -200,18 +221,46 @@ def main() -> None:
         raise SystemExit("No valid contrasts computed.")
 
     stacked = torch.stack(diffs)
-    mean_diff = stacked.mean(dim=0)
+    per_diff_norms = stacked.norm(dim=-1)
+
+    if args.source_column:
+        # One mean per source first, so a source with five option orderings does
+        # not outweigh one with two.
+        by_source: dict = {}
+        for src, diff, cnorm in zip(sources, diffs, chosen_norms):
+            by_source.setdefault(src, ([], []))
+            by_source[src][0].append(diff)
+            by_source[src][1].append(cnorm)
+        source_means = torch.stack(
+            [torch.stack(ds).mean(dim=0) for ds, _ in by_source.values()]
+        )
+        mean_diff = source_means.mean(dim=0)
+        mean_resid_norm = float(
+            sum(sum(ns) / len(ns) for _, ns in by_source.values()) / len(by_source)
+        )
+        weighting = "equal source weight after averaging all rotations within source"
+        construction = (
+            "mean chosen_full-rejected_full over rotations within source, "
+            "then mean over sources"
+        )
+        n_sources = len(by_source)
+    else:
+        mean_diff = stacked.mean(dim=0)
+        mean_resid_norm = float(sum(chosen_norms) / len(chosen_norms))
+        weighting = "equal weight per row"
+        construction = "per_situation chosen_full vs rejected_full, same prompt"
+        n_sources = None
+
     raw_norm = float(mean_diff.norm().item())
     unit = (mean_diff / raw_norm).float()
-    per_diff_norms = stacked.norm(dim=-1)
-    mean_resid_norm = float(sum(chosen_norms) / len(chosen_norms))
 
     steering_info = {
         "mode": "caa_mean",
         "method": "mean",
         "position": args.position,
         "extraction_layer": layer,
-        "construction": "per_situation chosen_full vs rejected_full, same prompt",
+        "construction": construction,
+        "source_weighting": weighting,
     }
     payload = {
         "direction": unit,
@@ -223,6 +272,7 @@ def main() -> None:
         "base_model": args.base_model,
         "hidden_size": int(unit.shape[0]),
         "num_situations": int(len(diffs)),
+        "num_sources": n_sources,
         "num_skipped": int(skipped),
         "seed": args.seed,
         "enable_thinking": not args.disable_thinking,
