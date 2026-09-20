@@ -1,12 +1,9 @@
 # Risk-Averse AIs
 
-Code, data, and locked configurations for reproducing the experiments in
-**Out-of-Distribution Generalization of Risk Aversion in Language Models**, by
-Kristina Zhang, Junior Chinomso Okoroafor, Benjamin Maltbie, Andrew Lin,
-Abhitej Bokka, and Elliott Thornley (Massachusetts Institute of Technology).
+Anonymous release for reproducing the experiments in
+**Out-of-Distribution Generalization of Risk Aversion in Language Models**.
 
-The trained adapters and steering directions are not in this repository; they
-live in the companion model archive on HuggingFace, described under
+The trained adapters and steering directions are not in this repository; see
 [Model artifacts](#model-artifacts) below.
 
 The repository is organized around one shared evaluation package plus one
@@ -130,26 +127,14 @@ Dataset filenames and metrics use the paper's option labels:
 
 ## Model artifacts
 
-The LoRA adapters and the activation-steering direction vectors are archived
-separately, because they are large binaries rather than code:
+The LoRA adapters, reward heads, and activation-steering direction vectors are
+archived separately, because they are large binaries rather than code: five
+seeds of each method for each of the five base models. The archive link is
+withheld during anonymous review and will be added here once review is
+complete.
 
-**<https://huggingface.co/MIT-SERC-risk-averse-AIs/risk-averse-ai-adapter-archive>**
-
-The archive holds the LoRA adapters for SFT, tie training, DPO, and RMFT, plus
-the reward heads and the activation-steering direction vectors — five seeds each,
-for all five base models.
-
-## Citation
-
-```bibtex
-@misc{zhang2026oodriskaversion,
-  title  = {Out-of-Distribution Generalization of Risk Aversion in Language Models},
-  author = {Zhang, Kristina and Okoroafor, Junior Chinomso and Maltbie, Benjamin
-            and Lin, Andrew and Bokka, Abhitej and Thornley, Elliott},
-  year   = {2026},
-  note   = {\url{https://github.com/riskaverseAIs/riskaverseAIs}}
-}
-```
+Everything needed to rebuild those artifacts from scratch is in this
+repository — the training data, the trainers, and the locked configurations.
 
 ## Licenses
 
