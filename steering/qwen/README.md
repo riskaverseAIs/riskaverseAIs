@@ -1,7 +1,7 @@
-# Steering, thinking-on: the three Qwen models
+# Steering: the three Qwen models
 
-This directory backs the Qwen3-1.7B, Qwen3-8B, and Qwen3-14B rows of the paper's
-main steering results. The Llama and Gemma rows are in
+This directory backs the Qwen3-1.7B, Qwen3-8B, and Qwen3-14B steering rows. The
+Llama and Gemma rows are in
 [`../crossfamily-correction/`](../crossfamily-correction/).
 
 ## Locked configurations
@@ -14,26 +14,23 @@ main steering results. The Llama and Gemma rows are in
 
 Five independently constructed directions per model, construction seeds 1-5,
 `CAA-mean` at `position=mean_response`, unit-normalised, added at all token
-positions. Unlike the Llama and Gemma directions in this evaluation mode, the
-Qwen directions were built with the gamble system prompt rather than an empty
-one.
+positions. The Qwen directions were built with the gamble system prompt; the
+Llama and Gemma directions with an empty one.
 
 `steering_manifest_qwen.json` has one entry per model and seed: the layer, alpha,
 `strength_r`, the residual norm, the base-model revision, the sha256 of the
 vector, the sha256 of the construction CSV, the paper rows it supports, and the
 per-set cooperate rate, baseline, and pooled parse rate.
 
-## Why the residual norms are dated later than the runs
+## Residual norms
 
-The three Qwen searches were run in raw `alpha`, which is not comparable across
-models or layers because the direction is unit-normalised and residual-stream
-magnitudes differ enormously. Only the Qwen3-8B build recorded its layer norm at
-the time. The Qwen3-14B and Qwen3-1.7B norms were measured afterwards, on
-16 September 2026, with
-[`../crossfamily-correction/code/measure_norms.py`](../crossfamily-correction/code/measure_norms.py) —
-the same script and probe prompt as the Llama and Gemma measurements — so all
-five `r` values sit on one scale. The full per-layer norms are in
-`RESIDUAL_NORMS_qwen1_7b.json` and `RESIDUAL_NORMS_qwen14b.json`.
+`r` is `alpha` divided by the mean residual-stream norm at the steered layer, so
+it needs that norm to be measured with a stated probe prompt. All five models'
+norms were measured with
+[`../crossfamily-correction/code/measure_norms.py`](../crossfamily-correction/code/measure_norms.py)
+and the same probe prompt, so the five `r` values sit on one scale. Full
+per-layer norms are in `RESIDUAL_NORMS_qwen1_7b.json` and
+`RESIDUAL_NORMS_qwen14b.json`.
 
 Those files also show why searching in raw alpha is a trap. In Qwen3-1.7B the mean
 residual norm runs from 17.0 at layer 0 to 3,216 at layer 26, a factor of 190
@@ -82,5 +79,5 @@ Swap `--dataset` for `medium_stakes_validation`, `high_stakes_test`, or
 
 The direction vectors themselves and the raw per-response generations are not
 here. The vectors are in the companion model archive under
-`paper_adapters/steering_thinking_on/`; see
+`paper_adapters/steering/`; see
 [`../README.md`](../README.md#direction-vectors).

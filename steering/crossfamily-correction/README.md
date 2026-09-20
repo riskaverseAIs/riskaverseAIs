@@ -44,9 +44,9 @@ independently constructed direction vectors, not a confidence interval.
 | Llama-3.1-8B-Instruct | 8 | 0.15 | 2.446740245819092 | 16.3116 |
 | Gemma-3-12B-IT | 16 | 0.07 | 2421.8088671875 | 34597.27 |
 
-Evaluated **thinking-on**, empty system prompt, direction added at all token positions.
-The direction vectors are in the separate (private) adapter archive; this directory holds
-results and code only.
+Evaluated with chains of thought enabled, an empty system prompt, and the direction added
+at all token positions. The direction vectors are in the companion model archive; this
+directory holds results and code only.
 
 Mean residual norm is prompt-dependent — about 17% variation on Gemma between two reasonable
 measuring prompts — so a ratio is only meaningful alongside the prompt used to measure the
