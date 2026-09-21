@@ -78,4 +78,6 @@ Swap `--dataset` for `medium_stakes_validation`, `high_stakes_test`, or
 ## Not in this repository
 
 The direction vectors themselves and the raw per-response generations are not
-here; see [`../README.md`](../README.md#direction-vectors).
+here. The vectors are in the companion model archive under
+`paper_adapters/steering/`; see
+[`../README.md`](../README.md#direction-vectors).

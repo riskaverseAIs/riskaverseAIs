@@ -1,9 +1,12 @@
 # Risk-Averse AIs
 
-Anonymous release for reproducing the experiments in
-**Out-of-Distribution Generalization of Risk Aversion in Language Models**.
+Code, data, and locked configurations for reproducing the experiments in
+**Out-of-Distribution Generalization of Risk Aversion in Language Models**, by
+Kristina Zhang, Junior Chinomso Okoroafor, Benjamin Maltbie, Andrew Lin,
+Abhitej Bokka, and Elliott Thornley (Massachusetts Institute of Technology).
 
-The trained adapters and steering directions are not in this repository; see
+The trained adapters and steering directions are not in this repository; they
+live in the companion model archive, described under
 [Model artifacts](#model-artifacts) below.
 
 The repository is organized around one shared evaluation package plus one
@@ -129,12 +132,25 @@ Dataset filenames and metrics use the paper's option labels:
 
 The LoRA adapters, reward heads, and activation-steering direction vectors are
 archived separately, because they are large binaries rather than code: five
-seeds of each method for each of the five base models. The archive link is
-withheld during anonymous review and will be added here once review is
-complete.
+seeds of each method for each of the five base models.
 
-Everything needed to rebuild those artifacts from scratch is in this
-repository — the training data, the trainers, and the locked configurations.
+**<https://huggingface.co/MIT-SERC-risk-averse-AIs/risk-averse-ai-adapter-archive>**
+
+Everything needed to rebuild those artifacts from scratch is also here — the
+training data, the trainers, the construction inputs, and the locked
+configurations.
+
+## Citation
+
+```bibtex
+@misc{zhang2026oodriskaversion,
+  title  = {Out-of-Distribution Generalization of Risk Aversion in Language Models},
+  author = {Zhang, Kristina and Okoroafor, Junior Chinomso and Maltbie, Benjamin
+            and Lin, Andrew and Bokka, Abhitej and Thornley, Elliott},
+  year   = {2026},
+  note   = {\url{https://github.com/riskaverseAIs/riskaverseAIs}}
+}
+```
 
 ## Licenses
 

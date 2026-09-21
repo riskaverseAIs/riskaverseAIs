@@ -128,8 +128,8 @@ The paper runs additionally used the runners in
 
 ## Direction vectors
 
-The vectors themselves are not in this repository. They live in the companion model
-archive, whose link is withheld during anonymous review. Every manifest entry there records
+The vectors themselves are not in this repository. They live in the companion model archive,
+<https://huggingface.co/MIT-SERC-risk-averse-AIs/risk-averse-ai-adapter-archive>, under `paper_adapters/steering/`. Every manifest entry there records
 `strength_r` and `mean_residual_norm_at_layer` beside `alpha`, so strength is comparable
 across models and layers without recomputing anything. The construction inputs and commands
-here rebuild them from scratch.
+here also rebuild them from scratch.

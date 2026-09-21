@@ -16,8 +16,8 @@ directory holds results and code only.
 
 Mean residual norm is prompt-dependent — about 17% variation on Gemma between two reasonable
 measuring prompts — so a ratio is only meaningful alongside the prompt used to measure the
-norm. Both values above use the empty system prompt these runs use. See
-`results/FINDINGS_residual_norms.md`.
+norm. Both values above use the empty system prompt these runs use. The full per-layer norms
+are in `results/*_RESIDUAL_NORMS.json`.
 
 ## Layout
 
@@ -33,10 +33,6 @@ results/
   *_PAPER_RESULTS.json        aggregate output of the paper runs
   *_CANDIDATES.json           every configuration tried in the search, with scores
   *_RESIDUAL_NORMS.json       mean residual norm per layer
-  RESULTS_paper_*.md          full write-ups of the five-vector runs
-  RESULTS_llama.md            hyperparameter search write-ups
-  RESULTS_gemma.md
-  FINDINGS_residual_norms.md  why raw alpha is not comparable; prompt-dependence
 
 code/
   run_paper.py          five-vector runner, including the validation gate
